@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+/* =====================================================================
+   LearnMate design tokens. Every colour in the app comes from here.
+   Dark is the default; html[data-theme='light'] overrides it.
+   ===================================================================== */
+:root,
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  /* surfaces (page < panel < raised) */
+  --color-bg: #101014;
+  --color-panel: #17171e;
+  --color-panel-raised: #1e1d27;
+  --surface-sidebar: #131318;
+  --surface-inset: #0d0d11;
+  --surface-toast: #23222d;
+  --code-bg: #0d0d11;
+  --code-text: #e9e5f5;
+
+  /* text */
+  --color-text: #f3f1f8;
+  --color-muted: #a8a4b5;
+  --color-subtle: #8a8699;
+
+  /* lines and overlays */
+  --ink: 255 255 255; /* rgb channels used for borders / hover tints */
+  --color-border: rgb(var(--ink) / 8%);
+  --color-border-strong: rgb(var(--ink) / 16%);
+  --shadow-rgb: 0 0 0;
+  --shadow-k: 1;
+  --scrim: rgb(0 0 0 / 60%);
+
+  /* accent (violet / indigo) */
+  --accent-rgb: 167 139 250;
+  --color-violet: #a78bfa;
+  --color-violet-bright: #b7a1ff;
+  --accent-text: #c2adff;
+  --accent-solid: #b29af8;
+  --accent-solid-hover: #c0adff;
+  --on-accent: #17121f;
+  --brand-1: #6644bf;
+  --brand-2: #432f7d;
+  --on-brand: #f4f0ff;
+
+  /* secondary and semantic hues: rgb for tints, text for labels */
+  --blue-rgb: 98 143 225;
+  --color-blue: #82aaff;
+  --blue-text: #9dbdff;
+  --green-rgb: 91 174 137;
+  --color-green: #83d5b0;
+  --green-text: #8edbb9;
+  --amber-rgb: 240 180 95;
+  --color-amber: #f0b45f;
+  --amber-text: #f2c27e;
+  --red-rgb: 240 138 138;
+  --color-red: #f08a8a;
+  --red-text: #f4a3a3;
+  --on-red: #2a1010;
+
+  /* charts and heatmap */
+  --chart-1: #a78bfa;
+  --chart-2: #5eead4;
+  --chart-3: #f0b45f;
+  --chart-4: #82aaff;
+  --chart-5: #f08a8a;
+  --heat-0: rgb(var(--ink) / 7%);
+  --heat-1: #3a2f63;
+  --heat-2: #5a45a3;
+  --heat-3: #8165d9;
+  --heat-4: #b7a1ff;
+
+  /* elevation */
+  --shadow-1: 0 1px 2px rgb(var(--shadow-rgb) / 30%);
+  --shadow-2: 0 8px 28px rgb(var(--shadow-rgb) / 34%);
+  --shadow-3: 0 24px 70px rgb(var(--shadow-rgb) / 45%);
+  --shadow-accent: 0 6px 24px rgb(var(--accent-rgb) / 22%);
+  --glow: rgb(139 108 232 / 18%);
+
+  /* layout, type, motion */
+  --font-heading: 'Manrope', 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Code', 'SFMono-Regular', Consolas, monospace;
+  --radius-card: 18px;
+  --radius-md: 12px;
+  --radius-sm: 9px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --dur-fast: 140ms;
+  --dur-med: 260ms;
+  --dur-slow: 520ms;
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --focus-ring: 0 0 0 3px rgb(var(--accent-rgb) / 35%);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.35, 0.64, 1);
+  --stagger: 55ms;
+
+  /* new in the light-theme pass: dark values keep the existing look */
+  --surface-pop: #1e1d27; /* popovers, menus, modals, toasts */
+  --surface-input: #0d0d11;
+  --border-input: rgb(var(--ink) / 16%);
+  --tabs-bg: rgb(var(--ink) / 4%);
+  --tab-active-bg: rgb(var(--accent-rgb) / 22%);
+  --tab-active-shadow: none;
+  --shadow-card: none;
+  --shadow-card-hover: var(--shadow-2);
+  --btn-bg: var(--accent-solid);
+  --btn-bg-hover: var(--accent-solid-hover);
+  --btn-shadow: 0 5px 22px rgb(var(--accent-rgb) / 16%);
+  --btn2-bg: rgb(var(--ink) / 3%);
+  --btn2-bg-hover: rgb(var(--ink) / 7%);
+  --btn2-border: rgb(var(--ink) / 11%);
+  --btn2-border-hover: rgb(var(--ink) / 18%);
+  --teal-rgb: 94 234 212;
+  --color-teal: #5eead4;
+  --teal-text: #7ee8d6;
+  /* atmosphere: all zero in dark so the dark theme is unchanged */
+  --page-a: 0%;
+  --page-b: 0%;
+  --wash: 0%;
+  --band: 0%;
+  --edge-glow: 0%;
+  --hero-a: 24%;
+  --hero-b: 14%;
+  --hero-teal: 0%;
+
+  font-family: 'DM Sans', Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--color-text);
+  background: var(--color-bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  /* surface ladder: page < sidebar < card < raised (nested) < popover */
+  --color-bg: #eeecf9;
+  --surface-sidebar: #f8f7fe;
+  --color-panel: #ffffff;
+  --color-panel-raised: #f9f8ff;
+  --surface-pop: #ffffff;
+  --surface-inset: #e9e6f6;
+  --surface-input: #f7f6fd;
+  --surface-toast: #ffffff;
+  --code-bg: #f5f3fc;
+  --code-text: #2a2540;
+
+  --color-text: #14112a;
+  --color-muted: #48445f;
+  --color-subtle: #5d5975;
+
+  --ink: 36 28 88;
+  --color-border: rgb(var(--ink) / 11%);
+  --color-border-strong: rgb(var(--ink) / 22%);
+  --border-input: #8e89aa;
+  --shadow-rgb: 52 36 130;
+  --shadow-k: 0.4;
+  --scrim: rgb(24 18 60 / 48%);
+
+  --accent-rgb: 106 69 224;
+  --color-violet: #6a45e0;
+  --color-violet-bright: #5733c9;
+  --accent-text: #5733c9;
+  --accent-solid: #6a45e0;
+  --accent-solid-hover: #5a38cc;
+  --on-accent: #ffffff;
+  --brand-1: #7757e0;
+  --brand-2: #4b34a8;
+  --on-brand: #ffffff;
+
+  --blue-rgb: 53 88 214;
+  --color-blue: #3558d6;
+  --blue-text: #2c4cc0;
+  --teal-rgb: 15 143 134;
+  --color-teal: #0f8f86;
+  --teal-text: #0b6b64;
+  --green-rgb: 22 128 90;
+  --color-green: #16805a;
+  --green-text: #136b4b;
+  --amber-rgb: 217 119 6;
+  --color-amber: #d97706;
+  --amber-text: #8f4b00;
+  --red-rgb: 211 58 58;
+  --color-red: #d33a3a;
+  --red-text: #b32d2d;
+  --on-red: #ffffff;
+
+  --chart-1: #6a45e0;
+  --chart-2: #0f8f86;
+  --chart-3: #d97706;
+  --chart-4: #3558d6;
+  --chart-5: #d33a3a;
+  --heat-0: #e6e3f3;
+  --heat-1: #cdbff8;
+  --heat-2: #aa93f0;
+  --heat-3: #805ce4;
+  --heat-4: #5530c8;
+
+  /* soft, violet-tinted elevation (never black) */
+  --shadow-1: 0 1px 2px rgb(var(--shadow-rgb) / 8%);
+  --shadow-2: 0 12px 30px -10px rgb(var(--shadow-rgb) / 20%), 0 2px 6px rgb(var(--shadow-rgb) / 7%);
+  --shadow-3: 0 32px 70px -22px rgb(var(--shadow-rgb) / 32%), 0 8px 20px rgb(var(--shadow-rgb) / 9%);
+  --shadow-card: 0 1px 2px rgb(var(--shadow-rgb) / 6%), 0 8px 22px -12px rgb(var(--shadow-rgb) / 16%);
+  --shadow-card-hover: 0 16px 36px -14px rgb(var(--shadow-rgb) / 28%), 0 2px 6px rgb(var(--shadow-rgb) / 8%);
+  --shadow-accent: 0 10px 26px -8px rgb(var(--accent-rgb) / 50%);
+  --glow: rgb(106 69 224 / 14%);
+
+  --tabs-bg: rgb(var(--ink) / 7%);
+  --tab-active-bg: #ffffff;
+  --tab-active-shadow: 0 1px 3px rgb(var(--shadow-rgb) / 16%);
+  --btn-bg: linear-gradient(135deg, #7650ee, #5a38d0);
+  --btn-bg-hover: linear-gradient(135deg, #6a43e6, #4f2fc4);
+  --btn-shadow: 0 8px 20px -8px rgb(var(--accent-rgb) / 60%), 0 1px 2px rgb(var(--shadow-rgb) / 14%);
+  --btn2-bg: #ffffff;
+  --btn2-bg-hover: #f4f1ff;
+  --btn2-border: rgb(var(--ink) / 24%);
+  --btn2-border-hover: rgb(var(--ink) / 40%);
+
+  /* atmosphere: tinted page, card washes, hero glow, alternating bands */
+  --page-a: 12%;
+  --page-b: 8%;
+  --wash: 7%;
+  --band: 3.5%;
+  --edge-glow: 20%;
+  --hero-a: 20%;
+  --hero-b: 12%;
+  --hero-teal: 10%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+/* Static page atmosphere (alpha is 0 in dark, so dark is unchanged). Fixed layer, no animation. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(900px circle at 88% -8%, rgb(var(--accent-rgb) / var(--page-a)), transparent 62%),
+    radial-gradient(760px circle at -6% 22%, rgb(var(--blue-rgb) / var(--page-b)), transparent 60%),
+    radial-gradient(700px circle at 60% 112%, rgb(var(--teal-rgb) / var(--page-b)), transparent 60%);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-subtle);
+  opacity: 1;
+}
+
+body,
+button,
+a,
+input,
+select,
+textarea {
+  font-family: 'DM Sans', Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--color-violet-bright);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+::selection {
+  color: var(--color-text);
+  background: rgb(var(--accent-rgb) / 35%);
+}
+
+/* Smooth cross-fade only while the user is switching theme (class is added briefly by ThemeProvider). */
+html.theme-switching,
+html.theme-switching *,
+html.theme-switching *::before,
+html.theme-switching *::after {
+  transition:
+    background-color 220ms ease,
+    color 220ms ease,
+    border-color 220ms ease,
+    fill 220ms ease,
+    stroke 220ms ease,
+    box-shadow 220ms ease !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,2084 @@
+{
+  "version": 1,
+  "problems": [
+    {
+      "slug": "sum-of-array",
+      "title": "Sum of Array",
+      "difficulty": "EASY",
+      "topic": "Arrays",
+      "tags": "arrays,math",
+      "description": "Given a list of integers, compute their total. The sum may be negative and can exceed the range of a 32-bit integer in larger inputs.",
+      "inputFormat": "First line: n (number of elements). Second line: n space-separated integers.",
+      "outputFormat": "A single integer: the sum of all elements.",
+      "constraints": "1 <= n <= 1000\n-10^4 <= each element <= 10^4",
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 256,
+      "testCases": [
+        {
+          "input": "5\n1 2 3 4 5",
+          "expectedOutput": "15",
+          "sample": true,
+          "explanation": "1 + 2 + 3 + 4 + 5 = 15.",
+          "orderIndex": 0
+        },
+        {
+          "input": "4\n-2 5 -1 3",
+          "expectedOutput": "5",
+          "sample": true,
+          "explanation": "-2 + 5 = 3, 3 - 1 = 2, 2 + 3 = 5.",
+          "orderIndex": 1
+        },
+        {
+          "input": "1\n7",
+          "expectedOutput": "7",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 2
+        },
+        {
+          "input": "6\n10 20 30 40 50 60",
+          "expectedOutput": "210",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 3
+        },
+        {
+          "input": "3\n-5 -5 -5",
+          "expectedOutput": "-15",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 4
+        },
+        {
+          "input": "8\n1 -1 2 -2 3 -3 4 -4",
+          "expectedOutput": "0",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 5
+        }
+      ],
+      "starters": {
+        "JAVA": "import java.util.*;\n\npublic class Main {\n    // Input: First line: n (number of elements). Second line: n space-separated integers.\n    static String solve(String input) {\n        // TODO: parse the input, compute the answer and return it as text.\n        return \"\";\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        StringBuilder sb = new StringBuilder();\n        while (sc.hasNextLine()) sb.append(sc.nextLine()).append('\\n');\n        System.out.print(solve(sb.toString()));\n    }\n}\n",
+        "PYTHON": "import sys\n\ndef solve(text: str) -> str:\n    # Input: First line: n (number of elements). Second line: n space-separated integers.\n    # TODO: parse the input, compute the answer and return it as text.\n    return \"\"\n\nprint(solve(sys.stdin.read()))\n",
+        "CPP": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring solve(const string& input) {\n    // Input: First line: n (number of elements). Second line: n space-separated integers.\n    // TODO: parse the input, compute the answer and return it as text.\n    return \"\";\n}\n\nint main() {\n    stringstream ss;\n    ss << cin.rdbuf();\n    cout << solve(ss.str());\n    return 0;\n}\n",
+        "JAVASCRIPT": "// Input: First line: n (number of elements). Second line: n space-separated integers.\nfunction solve(input) {\n  // TODO: parse the input, compute the answer and return it as text.\n  return '';\n}\n\nconst chunks = [];\nprocess.stdin.on('data', (chunk) => chunks.push(chunk));\nprocess.stdin.on('end', () => process.stdout.write(solve(chunks.join(''))));\n"
+      }
+    },
+    {
+      "slug": "rotate-array-right",
+      "title": "Rotate Array Right",
+      "difficulty": "MEDIUM",
+      "topic": "Arrays",
+      "tags": "arrays,rotation",
+      "description": "Rotate an array to the right by k positions. The rotation is circular: elements that move past the end reappear at the beginning.",
+      "inputFormat": "First line: n and k. Second line: n space-separated integers.",
+      "outputFormat": "The rotated array as space-separated integers.",
+      "constraints": "1 <= n <= 10^5\n0 <= k <= 10^9\n-10^4 <= each element <= 10^4",
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 256,
+      "testCases": [
+        {
+          "input": "5 2\n1 2 3 4 5",
+          "expectedOutput": "4 5 1 2 3",
+          "sample": true,
+          "explanation": "Rotating right by 2 moves 4 and 5 to the front: 4 5 1 2 3.",
+          "orderIndex": 0
+        },
+        {
+          "input": "4 0\n9 8 7 6",
+          "expectedOutput": "9 8 7 6",
+          "sample": true,
+          "explanation": "A rotation by 0 leaves the array unchanged.",
+          "orderIndex": 1
+        },
+        {
+          "input": "3 4\n1 2 3",
+          "expectedOutput": "3 1 2",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 2
+        },
+        {
+          "input": "1 100\n42",
+          "expectedOutput": "42",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 3
+        },
+        {
+          "input": "6 3\n10 20 30 40 50 60",
+          "expectedOutput": "40 50 60 10 20 30",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 4
+        },
+        {
+          "input": "5 11\n-1 -2 -3 -4 -5",
+          "expectedOutput": "-5 -1 -2 -3 -4",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 5
+        }
+      ],
+      "starters": {
+        "JAVA": "import java.util.*;\n\npublic class Main {\n    // Input: First line: n and k. Second line: n space-separated integers.\n    static String solve(String input) {\n        // TODO: parse the input, compute the answer and return it as text.\n        return \"\";\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        StringBuilder sb = new StringBuilder();\n        while (sc.hasNextLine()) sb.append(sc.nextLine()).append('\\n');\n        System.out.print(solve(sb.toString()));\n    }\n}\n",
+        "PYTHON": "import sys\n\ndef solve(text: str) -> str:\n    # Input: First line: n and k. Second line: n space-separated integers.\n    # TODO: parse the input, compute the answer and return it as text.\n    return \"\"\n\nprint(solve(sys.stdin.read()))\n",
+        "CPP": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring solve(const string& input) {\n    // Input: First line: n and k. Second line: n space-separated integers.\n    // TODO: parse the input, compute the answer and return it as text.\n    return \"\";\n}\n\nint main() {\n    stringstream ss;\n    ss << cin.rdbuf();\n    cout << solve(ss.str());\n    return 0;\n}\n",
+        "JAVASCRIPT": "// Input: First line: n and k. Second line: n space-separated integers.\nfunction solve(input) {\n  // TODO: parse the input, compute the answer and return it as text.\n  return '';\n}\n\nconst chunks = [];\nprocess.stdin.on('data', (chunk) => chunks.push(chunk));\nprocess.stdin.on('end', () => process.stdout.write(solve(chunks.join(''))));\n"
+      }
+    },
+    {
+      "slug": "reverse-words",
+      "title": "Reverse Word Order",
+      "difficulty": "EASY",
+      "topic": "Strings",
+      "tags": "strings,split",
+      "description": "Given a sentence whose words are separated by single spaces, print the words in reverse order while keeping the characters inside each word in their original order.",
+      "inputFormat": "One line containing words separated by single spaces.",
+      "outputFormat": "One line with the words in reverse order.",
+      "constraints": "1 <= number of words <= 1000\nEach word has 1 to 30 characters.",
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 256,
+      "testCases": [
+        {
+          "input": "the quick brown fox",
+          "expectedOutput": "fox brown quick the",
+          "sample": true,
+          "explanation": "Reversing the word order of four words gives fox brown quick the.",
+          "orderIndex": 0
+        },
+        {
+          "input": "hello world",
+          "expectedOutput": "world hello",
+          "sample": true,
+          "explanation": "Two words are swapped.",
+          "orderIndex": 1
+        },
+        {
+          "input": "learnmate ai",
+          "expectedOutput": "ai learnmate",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 2
+        },
+        {
+          "input": "one",
+          "expectedOutput": "one",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 3
+        },
+        {
+          "input": "a b c d e",
+          "expectedOutput": "e d c b a",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 4
+        },
+        {
+          "input": "code studio rocks",
+          "expectedOutput": "rocks studio code",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 5
+        }
+      ],
+      "starters": {
+        "JAVA": "import java.util.*;\n\npublic class Main {\n    // Input: One line containing words separated by single spaces.\n    static String solve(String input) {\n        // TODO: parse the input, compute the answer and return it as text.\n        return \"\";\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        StringBuilder sb = new StringBuilder();\n        while (sc.hasNextLine()) sb.append(sc.nextLine()).append('\\n');\n        System.out.print(solve(sb.toString()));\n    }\n}\n",
+        "PYTHON": "import sys\n\ndef solve(text: str) -> str:\n    # Input: One line containing words separated by single spaces.\n    # TODO: parse the input, compute the answer and return it as text.\n    return \"\"\n\nprint(solve(sys.stdin.read()))\n",
+        "CPP": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring solve(const string& input) {\n    // Input: One line containing words separated by single spaces.\n    // TODO: parse the input, compute the answer and return it as text.\n    return \"\";\n}\n\nint main() {\n    stringstream ss;\n    ss << cin.rdbuf();\n    cout << solve(ss.str());\n    return 0;\n}\n",
+        "JAVASCRIPT": "// Input: One line containing words separated by single spaces.\nfunction solve(input) {\n  // TODO: parse the input, compute the answer and return it as text.\n  return '';\n}\n\nconst chunks = [];\nprocess.stdin.on('data', (chunk) => chunks.push(chunk));\nprocess.stdin.on('end', () => process.stdout.write(solve(chunks.join(''))));\n"
+      }
+    },
+    {
+      "slug": "palindrome-string",
+      "title": "Alphanumeric Palindrome",
+      "difficulty": "EASY",
+      "topic": "Strings",
+      "tags": "strings,two-pointers",
+      "description": "A phrase is a palindrome when the sequence of letters and digits reads the same forwards and backwards, ignoring case and every other character. Decide whether the given line is such a palindrome.",
+      "inputFormat": "One line of text containing letters, digits, spaces and punctuation.",
+      "outputFormat": "true if the line is an alphanumeric palindrome, otherwise false.",
+      "constraints": "0 <= line length <= 10^4",
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 256,
+      "testCases": [
+        {
+          "input": "A man, a plan, a canal: Panama",
+          "expectedOutput": "true",
+          "sample": true,
+          "explanation": "Keeping only letters and lowering case gives amanaplanacanalpanama, which reads the same in both directions.",
+          "orderIndex": 0
+        },
+        {
+          "input": "race a car",
+          "expectedOutput": "false",
+          "sample": true,
+          "explanation": "raceacar reversed is racaecar, so it is not a palindrome.",
+          "orderIndex": 1
+        },
+        {
+          "input": "No lemon, no melon",
+          "expectedOutput": "true",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 2
+        },
+        {
+          "input": "Was it a car or a cat I saw?",
+          "expectedOutput": "true",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 3
+        },
+        {
+          "input": "abc",
+          "expectedOutput": "false",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 4
+        },
+        {
+          "input": "a.",
+          "expectedOutput": "true",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 5
+        }
+      ],
+      "starters": {
+        "JAVA": "import java.util.*;\n\npublic class Main {\n    // Input: One line of text containing letters, digits, spaces and punctuation.\n    static String solve(String input) {\n        // TODO: parse the input, compute the answer and return it as text.\n        return \"\";\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        StringBuilder sb = new StringBuilder();\n        while (sc.hasNextLine()) sb.append(sc.nextLine()).append('\\n');\n        System.out.print(solve(sb.toString()));\n    }\n}\n",
+        "PYTHON": "import sys\n\ndef solve(text: str) -> str:\n    # Input: One line of text containing letters, digits, spaces and punctuation.\n    # TODO: parse the input, compute the answer and return it as text.\n    return \"\"\n\nprint(solve(sys.stdin.read()))\n",
+        "CPP": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring solve(const string& input) {\n    // Input: One line of text containing letters, digits, spaces and punctuation.\n    // TODO: parse the input, compute the answer and return it as text.\n    return \"\";\n}\n\nint main() {\n    stringstream ss;\n    ss << cin.rdbuf();\n    cout << solve(ss.str());\n    return 0;\n}\n",
+        "JAVASCRIPT": "// Input: One line of text containing letters, digits, spaces and punctuation.\nfunction solve(input) {\n  // TODO: parse the input, compute the answer and return it as text.\n  return '';\n}\n\nconst chunks = [];\nprocess.stdin.on('data', (chunk) => chunks.push(chunk));\nprocess.stdin.on('end', () => process.stdout.write(solve(chunks.join(''))));\n"
+      }
+    },
+    {
+      "slug": "first-unique-character",
+      "title": "First Unique Character",
+      "difficulty": "MEDIUM",
+      "topic": "Hashing",
+      "tags": "hashing,strings",
+      "description": "Find the first character in a lowercase string that occurs exactly once. If every character repeats, print a single dash.",
+      "inputFormat": "One line containing lowercase English letters.",
+      "outputFormat": "The first non-repeating character, or - if none exists.",
+      "constraints": "1 <= length <= 10^5",
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 256,
+      "testCases": [
+        {
+          "input": "leetcode",
+          "expectedOutput": "l",
+          "sample": true,
+          "explanation": "l appears once and is the first such character.",
+          "orderIndex": 0
+        },
+        {
+          "input": "aabbcc",
+          "expectedOutput": "-",
+          "sample": true,
+          "explanation": "Every character appears twice, so the answer is -.",
+          "orderIndex": 1
+        },
+        {
+          "input": "loveleetcode",
+          "expectedOutput": "v",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 2
+        },
+        {
+          "input": "z",
+          "expectedOutput": "z",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 3
+        },
+        {
+          "input": "aabbccdde",
+          "expectedOutput": "e",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 4
+        },
+        {
+          "input": "abcdefghij",
+          "expectedOutput": "a",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 5
+        }
+      ],
+      "starters": {
+        "JAVA": "import java.util.*;\n\npublic class Main {\n    // Input: One line containing lowercase English letters.\n    static String solve(String input) {\n        // TODO: parse the input, compute the answer and return it as text.\n        return \"\";\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        StringBuilder sb = new StringBuilder();\n        while (sc.hasNextLine()) sb.append(sc.nextLine()).append('\\n');\n        System.out.print(solve(sb.toString()));\n    }\n}\n",
+        "PYTHON": "import sys\n\ndef solve(text: str) -> str:\n    # Input: One line containing lowercase English letters.\n    # TODO: parse the input, compute the answer and return it as text.\n    return \"\"\n\nprint(solve(sys.stdin.read()))\n",
+        "CPP": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring solve(const string& input) {\n    // Input: One line containing lowercase English letters.\n    // TODO: parse the input, compute the answer and return it as text.\n    return \"\";\n}\n\nint main() {\n    stringstream ss;\n    ss << cin.rdbuf();\n    cout << solve(ss.str());\n    return 0;\n}\n",
+        "JAVASCRIPT": "// Input: One line containing lowercase English letters.\nfunction solve(input) {\n  // TODO: parse the input, compute the answer and return it as text.\n  return '';\n}\n\nconst chunks = [];\nprocess.stdin.on('data', (chunk) => chunks.push(chunk));\nprocess.stdin.on('end', () => process.stdout.write(solve(chunks.join(''))));\n"
+      }
+    },
+    {
+      "slug": "two-sum-indices",
+      "title": "Two Sum Indices",
+      "difficulty": "MEDIUM",
+      "topic": "Hashing",
+      "tags": "hashing,arrays",
+      "description": "Given an array and a target, find two different positions whose values add up to the target. Exactly one such pair exists. Print the smaller index first.",
+      "inputFormat": "First line: n and target. Second line: n space-separated integers.",
+      "outputFormat": "Two space-separated indices (0-based), smaller first.",
+      "constraints": "2 <= n <= 10^5\n-10^9 <= values and target <= 10^9",
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 256,
+      "testCases": [
+        {
+          "input": "4 9\n2 7 11 15",
+          "expectedOutput": "0 1",
+          "sample": true,
+          "explanation": "2 (index 0) + 7 (index 1) = 9.",
+          "orderIndex": 0
+        },
+        {
+          "input": "3 6\n3 2 4",
+          "expectedOutput": "1 2",
+          "sample": true,
+          "explanation": "2 (index 1) + 4 (index 2) = 6.",
+          "orderIndex": 1
+        },
+        {
+          "input": "2 10\n5 5",
+          "expectedOutput": "0 1",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 2
+        },
+        {
+          "input": "5 100\n40 60 10 20 80",
+          "expectedOutput": "0 1",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 3
+        },
+        {
+          "input": "4 -5\n-10 5 0 -5",
+          "expectedOutput": "0 1",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 4
+        },
+        {
+          "input": "6 8\n1 2 3 4 5 6",
+          "expectedOutput": "2 4",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 5
+        }
+      ],
+      "starters": {
+        "JAVA": "import java.util.*;\n\npublic class Main {\n    // Input: First line: n and target. Second line: n space-separated integers.\n    static String solve(String input) {\n        // TODO: parse the input, compute the answer and return it as text.\n        return \"\";\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        StringBuilder sb = new StringBuilder();\n        while (sc.hasNextLine()) sb.append(sc.nextLine()).append('\\n');\n        System.out.print(solve(sb.toString()));\n    }\n}\n",
+        "PYTHON": "import sys\n\ndef solve(text: str) -> str:\n    # Input: First line: n and target. Second line: n space-separated integers.\n    # TODO: parse the input, compute the answer and return it as text.\n    return \"\"\n\nprint(solve(sys.stdin.read()))\n",
+        "CPP": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring solve(const string& input) {\n    // Input: First line: n and target. Second line: n space-separated integers.\n    // TODO: parse the input, compute the answer and return it as text.\n    return \"\";\n}\n\nint main() {\n    stringstream ss;\n    ss << cin.rdbuf();\n    cout << solve(ss.str());\n    return 0;\n}\n",
+        "JAVASCRIPT": "// Input: First line: n and target. Second line: n space-separated integers.\nfunction solve(input) {\n  // TODO: parse the input, compute the answer and return it as text.\n  return '';\n}\n\nconst chunks = [];\nprocess.stdin.on('data', (chunk) => chunks.push(chunk));\nprocess.stdin.on('end', () => process.stdout.write(solve(chunks.join(''))));\n"
+      }
+    },
+    {
+      "slug": "binary-search-index",
+      "title": "Binary Search Index",
+      "difficulty": "EASY",
+      "topic": "Searching",
+      "tags": "searching,binary-search",
+      "description": "Search for a target value in a sorted ascending array. If the value exists, print its index; otherwise print -1. All values are distinct.",
+      "inputFormat": "First line: n and target. Second line: n integers sorted in ascending order.",
+      "outputFormat": "The index of target (0-based), or -1.",
+      "constraints": "1 <= n <= 10^5\n-10^9 <= values, target <= 10^9",
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 256,
+      "testCases": [
+        {
+          "input": "6 9\n1 3 5 7 9 11",
+          "expectedOutput": "4",
+          "sample": true,
+          "explanation": "9 is at index 4.",
+          "orderIndex": 0
+        },
+        {
+          "input": "5 4\n1 2 3 4 5",
+          "expectedOutput": "3",
+          "sample": true,
+          "explanation": "4 appears last in the list, at index 3.",
+          "orderIndex": 1
+        },
+        {
+          "input": "5 1\n1 2 3 4 5",
+          "expectedOutput": "0",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 2
+        },
+        {
+          "input": "5 6\n1 2 3 4 5",
+          "expectedOutput": "-1",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 3
+        },
+        {
+          "input": "1 42\n42",
+          "expectedOutput": "0",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 4
+        },
+        {
+          "input": "8 20\n2 4 6 8 10 12 14 20",
+          "expectedOutput": "7",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 5
+        }
+      ],
+      "starters": {
+        "JAVA": "import java.util.*;\n\npublic class Main {\n    // Input: First line: n and target. Second line: n integers sorted in ascending order.\n    static String solve(String input) {\n        // TODO: parse the input, compute the answer and return it as text.\n        return \"\";\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        StringBuilder sb = new StringBuilder();\n        while (sc.hasNextLine()) sb.append(sc.nextLine()).append('\\n');\n        System.out.print(solve(sb.toString()));\n    }\n}\n",
+        "PYTHON": "import sys\n\ndef solve(text: str) -> str:\n    # Input: First line: n and target. Second line: n integers sorted in ascending order.\n    # TODO: parse the input, compute the answer and return it as text.\n    return \"\"\n\nprint(solve(sys.stdin.read()))\n",
+        "CPP": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring solve(const string& input) {\n    // Input: First line: n and target. Second line: n integers sorted in ascending order.\n    // TODO: parse the input, compute the answer and return it as text.\n    return \"\";\n}\n\nint main() {\n    stringstream ss;\n    ss << cin.rdbuf();\n    cout << solve(ss.str());\n    return 0;\n}\n",
+        "JAVASCRIPT": "// Input: First line: n and target. Second line: n integers sorted in ascending order.\nfunction solve(input) {\n  // TODO: parse the input, compute the answer and return it as text.\n  return '';\n}\n\nconst chunks = [];\nprocess.stdin.on('data', (chunk) => chunks.push(chunk));\nprocess.stdin.on('end', () => process.stdout.write(solve(chunks.join(''))));\n"
+      }
+    },
+    {
+      "slug": "first-occurrence",
+      "title": "First Occurrence",
+      "difficulty": "MEDIUM",
+      "topic": "Searching",
+      "tags": "searching,binary-search",
+      "description": "The array is sorted in ascending order but may contain duplicates. Find the smallest index at which the target occurs, or -1 if it does not occur.",
+      "inputFormat": "First line: n and target. Second line: n integers sorted in ascending order.",
+      "outputFormat": "The first index of target (0-based), or -1.",
+      "constraints": "1 <= n <= 10^5\n-10^9 <= values, target <= 10^9",
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 256,
+      "testCases": [
+        {
+          "input": "7 3\n1 2 3 3 3 5 6",
+          "expectedOutput": "2",
+          "sample": true,
+          "explanation": "3 first appears at index 2.",
+          "orderIndex": 0
+        },
+        {
+          "input": "5 4\n1 2 3 4 5",
+          "expectedOutput": "3",
+          "sample": true,
+          "explanation": "4 is found at index 3.",
+          "orderIndex": 1
+        },
+        {
+          "input": "4 2\n2 2 2 2",
+          "expectedOutput": "0",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 2
+        },
+        {
+          "input": "6 7\n1 2 3 4 5 6",
+          "expectedOutput": "-1",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 3
+        },
+        {
+          "input": "8 5\n1 2 5 5 5 8 9 10",
+          "expectedOutput": "2",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 4
+        },
+        {
+          "input": "1 9\n9",
+          "expectedOutput": "0",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 5
+        }
+      ],
+      "starters": {
+        "JAVA": "import java.util.*;\n\npublic class Main {\n    // Input: First line: n and target. Second line: n integers sorted in ascending order.\n    static String solve(String input) {\n        // TODO: parse the input, compute the answer and return it as text.\n        return \"\";\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        StringBuilder sb = new StringBuilder();\n        while (sc.hasNextLine()) sb.append(sc.nextLine()).append('\\n');\n        System.out.print(solve(sb.toString()));\n    }\n}\n",
+        "PYTHON": "import sys\n\ndef solve(text: str) -> str:\n    # Input: First line: n and target. Second line: n integers sorted in ascending order.\n    # TODO: parse the input, compute the answer and return it as text.\n    return \"\"\n\nprint(solve(sys.stdin.read()))\n",
+        "CPP": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring solve(const string& input) {\n    // Input: First line: n and target. Second line: n integers sorted in ascending order.\n    // TODO: parse the input, compute the answer and return it as text.\n    return \"\";\n}\n\nint main() {\n    stringstream ss;\n    ss << cin.rdbuf();\n    cout << solve(ss.str());\n    return 0;\n}\n",
+        "JAVASCRIPT": "// Input: First line: n and target. Second line: n integers sorted in ascending order.\nfunction solve(input) {\n  // TODO: parse the input, compute the answer and return it as text.\n  return '';\n}\n\nconst chunks = [];\nprocess.stdin.on('data', (chunk) => chunks.push(chunk));\nprocess.stdin.on('end', () => process.stdout.write(solve(chunks.join(''))));\n"
+      }
+    },
+    {
+      "slug": "sort-by-parity",
+      "title": "Evens Before Odds",
+      "difficulty": "MEDIUM",
+      "topic": "Sorting",
+      "tags": "sorting,arrays",
+      "description": "Rearrange an array so that all even numbers come first and all odd numbers come last. Within the even group and within the odd group, values must be sorted in ascending order.",
+      "inputFormat": "First line: n. Second line: n space-separated integers.",
+      "outputFormat": "The rearranged array as space-separated integers.",
+      "constraints": "1 <= n <= 10^5\n-10^9 <= each element <= 10^9",
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 256,
+      "testCases": [
+        {
+          "input": "6\n3 2 4 1 6 5",
+          "expectedOutput": "2 4 6 1 3 5",
+          "sample": true,
+          "explanation": "Evens are 2 4 6; odds are 1 3 5.",
+          "orderIndex": 0
+        },
+        {
+          "input": "5\n7 7 2 2 9",
+          "expectedOutput": "2 2 7 7 9",
+          "sample": true,
+          "explanation": "Evens are 2 2; odds are 7 7 9.",
+          "orderIndex": 1
+        },
+        {
+          "input": "4\n1 3 5 7",
+          "expectedOutput": "1 3 5 7",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 2
+        },
+        {
+          "input": "4\n8 6 4 2",
+          "expectedOutput": "2 4 6 8",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 3
+        },
+        {
+          "input": "1\n0",
+          "expectedOutput": "0",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 4
+        },
+        {
+          "input": "7\n-2 3 -4 5 6 -7 8",
+          "expectedOutput": "-4 -2 6 8 -7 3 5",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 5
+        }
+      ],
+      "starters": {
+        "JAVA": "import java.util.*;\n\npublic class Main {\n    // Input: First line: n. Second line: n space-separated integers.\n    static String solve(String input) {\n        // TODO: parse the input, compute the answer and return it as text.\n        return \"\";\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        StringBuilder sb = new StringBuilder();\n        while (sc.hasNextLine()) sb.append(sc.nextLine()).append('\\n');\n        System.out.print(solve(sb.toString()));\n    }\n}\n",
+        "PYTHON": "import sys\n\ndef solve(text: str) -> str:\n    # Input: First line: n. Second line: n space-separated integers.\n    # TODO: parse the input, compute the answer and return it as text.\n    return \"\"\n\nprint(solve(sys.stdin.read()))\n",
+        "CPP": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring solve(const string& input) {\n    // Input: First line: n. Second line: n space-separated integers.\n    // TODO: parse the input, compute the answer and return it as text.\n    return \"\";\n}\n\nint main() {\n    stringstream ss;\n    ss << cin.rdbuf();\n    cout << solve(ss.str());\n    return 0;\n}\n",
+        "JAVASCRIPT": "// Input: First line: n. Second line: n space-separated integers.\nfunction solve(input) {\n  // TODO: parse the input, compute the answer and return it as text.\n  return '';\n}\n\nconst chunks = [];\nprocess.stdin.on('data', (chunk) => chunks.push(chunk));\nprocess.stdin.on('end', () => process.stdout.write(solve(chunks.join(''))));\n"
+      }
+    },
+    {
+      "slug": "kth-largest",
+      "title": "Kth Largest Element",
+      "difficulty": "MEDIUM",
+      "topic": "Sorting",
+      "tags": "sorting,selection",
+      "description": "Given distinct integers and a value k, print the k-th largest element. k = 1 asks for the maximum.",
+      "inputFormat": "First line: n and k. Second line: n distinct integers.",
+      "outputFormat": "The k-th largest integer.",
+      "constraints": "1 <= k <= n <= 10^5\n-10^9 <= each element <= 10^9",
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 256,
+      "testCases": [
+        {
+          "input": "6 2\n3 2 1 5 6 4",
+          "expectedOutput": "5",
+          "sample": true,
+          "explanation": "Sorted descending: 6 5 4 3 2 1. The second is 5.",
+          "orderIndex": 0
+        },
+        {
+          "input": "3 1\n9 7 8",
+          "expectedOutput": "9",
+          "sample": true,
+          "explanation": "k = 1 is the maximum, 9.",
+          "orderIndex": 1
+        },
+        {
+          "input": "5 5\n10 20 30 40 50",
+          "expectedOutput": "10",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 2
+        },
+        {
+          "input": "1 1\n-7",
+          "expectedOutput": "-7",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 3
+        },
+        {
+          "input": "6 3\n7 10 4 3 20 15",
+          "expectedOutput": "10",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 4
+        },
+        {
+          "input": "4 2\n-1 -2 -3 -4",
+          "expectedOutput": "-2",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 5
+        }
+      ],
+      "starters": {
+        "JAVA": "import java.util.*;\n\npublic class Main {\n    // Input: First line: n and k. Second line: n distinct integers.\n    static String solve(String input) {\n        // TODO: parse the input, compute the answer and return it as text.\n        return \"\";\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        StringBuilder sb = new StringBuilder();\n        while (sc.hasNextLine()) sb.append(sc.nextLine()).append('\\n');\n        System.out.print(solve(sb.toString()));\n    }\n}\n",
+        "PYTHON": "import sys\n\ndef solve(text: str) -> str:\n    # Input: First line: n and k. Second line: n distinct integers.\n    # TODO: parse the input, compute the answer and return it as text.\n    return \"\"\n\nprint(solve(sys.stdin.read()))\n",
+        "CPP": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring solve(const string& input) {\n    // Input: First line: n and k. Second line: n distinct integers.\n    // TODO: parse the input, compute the answer and return it as text.\n    return \"\";\n}\n\nint main() {\n    stringstream ss;\n    ss << cin.rdbuf();\n    cout << solve(ss.str());\n    return 0;\n}\n",
+        "JAVASCRIPT": "// Input: First line: n and k. Second line: n distinct integers.\nfunction solve(input) {\n  // TODO: parse the input, compute the answer and return it as text.\n  return '';\n}\n\nconst chunks = [];\nprocess.stdin.on('data', (chunk) => chunks.push(chunk));\nprocess.stdin.on('end', () => process.stdout.write(solve(chunks.join(''))));\n"
+      }
+    },
+    {
+      "slug": "pair-with-target",
+      "title": "Pair With Target Sum",
+      "difficulty": "EASY",
+      "topic": "Two Pointers",
+      "tags": "two-pointers,arrays",
+      "description": "Given a sorted array and a target, decide whether two different elements add up to the target. Printing yes or no is enough.",
+      "inputFormat": "First line: n and target. Second line: n integers sorted in ascending order.",
+      "outputFormat": "yes if such a pair exists, otherwise no.",
+      "constraints": "1 <= n <= 10^5\n-10^9 <= values, target <= 10^9",
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 256,
+      "testCases": [
+        {
+          "input": "5 9\n1 2 3 4 5",
+          "expectedOutput": "yes",
+          "sample": true,
+          "explanation": "4 and 5 (last two elements) sum to 9.",
+          "orderIndex": 0
+        },
+        {
+          "input": "4 20\n1 2 3 4",
+          "expectedOutput": "no",
+          "sample": true,
+          "explanation": "The largest possible pair sums to 7, so no pair reaches 20.",
+          "orderIndex": 1
+        },
+        {
+          "input": "2 10\n5 5",
+          "expectedOutput": "yes",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 2
+        },
+        {
+          "input": "5 8\n1 2 3 4 5",
+          "expectedOutput": "yes",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 3
+        },
+        {
+          "input": "3 100\n1 2 3",
+          "expectedOutput": "no",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 4
+        },
+        {
+          "input": "6 0\n-5 -3 -1 1 3 5",
+          "expectedOutput": "yes",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 5
+        }
+      ],
+      "starters": {
+        "JAVA": "import java.util.*;\n\npublic class Main {\n    // Input: First line: n and target. Second line: n integers sorted in ascending order.\n    static String solve(String input) {\n        // TODO: parse the input, compute the answer and return it as text.\n        return \"\";\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        StringBuilder sb = new StringBuilder();\n        while (sc.hasNextLine()) sb.append(sc.nextLine()).append('\\n');\n        System.out.print(solve(sb.toString()));\n    }\n}\n",
+        "PYTHON": "import sys\n\ndef solve(text: str) -> str:\n    # Input: First line: n and target. Second line: n integers sorted in ascending order.\n    # TODO: parse the input, compute the answer and return it as text.\n    return \"\"\n\nprint(solve(sys.stdin.read()))\n",
+        "CPP": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring solve(const string& input) {\n    // Input: First line: n and target. Second line: n integers sorted in ascending order.\n    // TODO: parse the input, compute the answer and return it as text.\n    return \"\";\n}\n\nint main() {\n    stringstream ss;\n    ss << cin.rdbuf();\n    cout << solve(ss.str());\n    return 0;\n}\n",
+        "JAVASCRIPT": "// Input: First line: n and target. Second line: n integers sorted in ascending order.\nfunction solve(input) {\n  // TODO: parse the input, compute the answer and return it as text.\n  return '';\n}\n\nconst chunks = [];\nprocess.stdin.on('data', (chunk) => chunks.push(chunk));\nprocess.stdin.on('end', () => process.stdout.write(solve(chunks.join(''))));\n"
+      }
+    },
+    {
+      "slug": "remove-duplicates-count",
+      "title": "Unique Values In Sorted Array",
+      "difficulty": "EASY",
+      "topic": "Two Pointers",
+      "tags": "two-pointers,arrays",
+      "description": "A sorted array can contain duplicates. Count how many distinct values it holds and print them in order.",
+      "inputFormat": "First line: n. Second line: n integers sorted in ascending order.",
+      "outputFormat": "First line: number of distinct values. Second line: the distinct values, space-separated.",
+      "constraints": "1 <= n <= 10^5\n-10^9 <= each element <= 10^9",
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 256,
+      "testCases": [
+        {
+          "input": "6\n1 1 2 2 3 4",
+          "expectedOutput": "4\n1 2 3 4",
+          "sample": true,
+          "explanation": "The distinct values are 1, 2, 3 and 4.",
+          "orderIndex": 0
+        },
+        {
+          "input": "3\n5 5 5",
+          "expectedOutput": "1\n5",
+          "sample": true,
+          "explanation": "Only the value 5 is present.",
+          "orderIndex": 1
+        },
+        {
+          "input": "1\n0",
+          "expectedOutput": "1\n0",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 2
+        },
+        {
+          "input": "5\n-2 -1 0 1 2",
+          "expectedOutput": "5\n-2 -1 0 1 2",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 3
+        },
+        {
+          "input": "7\n1 2 2 3 3 3 4",
+          "expectedOutput": "4\n1 2 3 4",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 4
+        },
+        {
+          "input": "4\n9 9 10 10",
+          "expectedOutput": "2\n9 10",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 5
+        }
+      ],
+      "starters": {
+        "JAVA": "import java.util.*;\n\npublic class Main {\n    // Input: First line: n. Second line: n integers sorted in ascending order.\n    static String solve(String input) {\n        // TODO: parse the input, compute the answer and return it as text.\n        return \"\";\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        StringBuilder sb = new StringBuilder();\n        while (sc.hasNextLine()) sb.append(sc.nextLine()).append('\\n');\n        System.out.print(solve(sb.toString()));\n    }\n}\n",
+        "PYTHON": "import sys\n\ndef solve(text: str) -> str:\n    # Input: First line: n. Second line: n integers sorted in ascending order.\n    # TODO: parse the input, compute the answer and return it as text.\n    return \"\"\n\nprint(solve(sys.stdin.read()))\n",
+        "CPP": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring solve(const string& input) {\n    // Input: First line: n. Second line: n integers sorted in ascending order.\n    // TODO: parse the input, compute the answer and return it as text.\n    return \"\";\n}\n\nint main() {\n    stringstream ss;\n    ss << cin.rdbuf();\n    cout << solve(ss.str());\n    return 0;\n}\n",
+        "JAVASCRIPT": "// Input: First line: n. Second line: n integers sorted in ascending order.\nfunction solve(input) {\n  // TODO: parse the input, compute the answer and return it as text.\n  return '';\n}\n\nconst chunks = [];\nprocess.stdin.on('data', (chunk) => chunks.push(chunk));\nprocess.stdin.on('end', () => process.stdout.write(solve(chunks.join(''))));\n"
+      }
+    },
+    {
+      "slug": "max-sum-window",
+      "title": "Maximum Sum Window",
+      "difficulty": "MEDIUM",
+      "topic": "Sliding Window",
+      "tags": "sliding-window,arrays",
+      "description": "Find the largest sum of any contiguous subarray of exactly k elements.",
+      "inputFormat": "First line: n and k. Second line: n integers.",
+      "outputFormat": "The maximum window sum.",
+      "constraints": "1 <= k <= n <= 10^5\n-10^4 <= each element <= 10^4",
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 256,
+      "testCases": [
+        {
+          "input": "5 2\n1 4 2 10 23",
+          "expectedOutput": "33",
+          "sample": true,
+          "explanation": "The best adjacent pair is 10 and 23, summing to 33.",
+          "orderIndex": 0
+        },
+        {
+          "input": "4 4\n1 2 3 4",
+          "expectedOutput": "10",
+          "sample": true,
+          "explanation": "Only one window of size 4 exists and its sum is 10.",
+          "orderIndex": 1
+        },
+        {
+          "input": "5 1\n-3 -1 -2 -4 -5",
+          "expectedOutput": "-1",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 2
+        },
+        {
+          "input": "6 3\n2 1 5 1 3 2",
+          "expectedOutput": "9",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 3
+        },
+        {
+          "input": "3 2\n-10 5 -10",
+          "expectedOutput": "-5",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 4
+        },
+        {
+          "input": "7 4\n1 2 3 4 5 6 7",
+          "expectedOutput": "22",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 5
+        }
+      ],
+      "starters": {
+        "JAVA": "import java.util.*;\n\npublic class Main {\n    // Input: First line: n and k. Second line: n integers.\n    static String solve(String input) {\n        // TODO: parse the input, compute the answer and return it as text.\n        return \"\";\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        StringBuilder sb = new StringBuilder();\n        while (sc.hasNextLine()) sb.append(sc.nextLine()).append('\\n');\n        System.out.print(solve(sb.toString()));\n    }\n}\n",
+        "PYTHON": "import sys\n\ndef solve(text: str) -> str:\n    # Input: First line: n and k. Second line: n integers.\n    # TODO: parse the input, compute the answer and return it as text.\n    return \"\"\n\nprint(solve(sys.stdin.read()))\n",
+        "CPP": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring solve(const string& input) {\n    // Input: First line: n and k. Second line: n integers.\n    // TODO: parse the input, compute the answer and return it as text.\n    return \"\";\n}\n\nint main() {\n    stringstream ss;\n    ss << cin.rdbuf();\n    cout << solve(ss.str());\n    return 0;\n}\n",
+        "JAVASCRIPT": "// Input: First line: n and k. Second line: n integers.\nfunction solve(input) {\n  // TODO: parse the input, compute the answer and return it as text.\n  return '';\n}\n\nconst chunks = [];\nprocess.stdin.on('data', (chunk) => chunks.push(chunk));\nprocess.stdin.on('end', () => process.stdout.write(solve(chunks.join(''))));\n"
+      }
+    },
+    {
+      "slug": "longest-unique-substring",
+      "title": "Longest Unique Substring",
+      "difficulty": "MEDIUM",
+      "topic": "Sliding Window",
+      "tags": "sliding-window,strings",
+      "description": "Find the length of the longest contiguous substring that contains no repeated character.",
+      "inputFormat": "One line containing lowercase English letters.",
+      "outputFormat": "The length of the longest substring without repeating characters.",
+      "constraints": "1 <= length <= 10^5",
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 256,
+      "testCases": [
+        {
+          "input": "abcabcbb",
+          "expectedOutput": "3",
+          "sample": true,
+          "explanation": "abc is the longest unique run, length 3.",
+          "orderIndex": 0
+        },
+        {
+          "input": "bbbbb",
+          "expectedOutput": "1",
+          "sample": true,
+          "explanation": "Every character repeats, so the best run is a single b.",
+          "orderIndex": 1
+        },
+        {
+          "input": "pwwkew",
+          "expectedOutput": "3",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 2
+        },
+        {
+          "input": "abcdef",
+          "expectedOutput": "6",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 3
+        },
+        {
+          "input": "abba",
+          "expectedOutput": "2",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 4
+        },
+        {
+          "input": "aab",
+          "expectedOutput": "2",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 5
+        }
+      ],
+      "starters": {
+        "JAVA": "import java.util.*;\n\npublic class Main {\n    // Input: One line containing lowercase English letters.\n    static String solve(String input) {\n        // TODO: parse the input, compute the answer and return it as text.\n        return \"\";\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        StringBuilder sb = new StringBuilder();\n        while (sc.hasNextLine()) sb.append(sc.nextLine()).append('\\n');\n        System.out.print(solve(sb.toString()));\n    }\n}\n",
+        "PYTHON": "import sys\n\ndef solve(text: str) -> str:\n    # Input: One line containing lowercase English letters.\n    # TODO: parse the input, compute the answer and return it as text.\n    return \"\"\n\nprint(solve(sys.stdin.read()))\n",
+        "CPP": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring solve(const string& input) {\n    // Input: One line containing lowercase English letters.\n    // TODO: parse the input, compute the answer and return it as text.\n    return \"\";\n}\n\nint main() {\n    stringstream ss;\n    ss << cin.rdbuf();\n    cout << solve(ss.str());\n    return 0;\n}\n",
+        "JAVASCRIPT": "// Input: One line containing lowercase English letters.\nfunction solve(input) {\n  // TODO: parse the input, compute the answer and return it as text.\n  return '';\n}\n\nconst chunks = [];\nprocess.stdin.on('data', (chunk) => chunks.push(chunk));\nprocess.stdin.on('end', () => process.stdout.write(solve(chunks.join(''))));\n"
+      }
+    },
+    {
+      "slug": "factorial",
+      "title": "Factorial",
+      "difficulty": "EASY",
+      "topic": "Recursion",
+      "tags": "recursion,math",
+      "description": "Compute n! = n × (n-1) × ... × 1 with 0! = 1. The result can be large, so print the exact integer.",
+      "inputFormat": "A single integer n.",
+      "outputFormat": "The exact value of n!.",
+      "constraints": "0 <= n <= 20",
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 256,
+      "testCases": [
+        {
+          "input": "5",
+          "expectedOutput": "120",
+          "sample": true,
+          "explanation": "5! = 5 × 4 × 3 × 2 × 1 = 120.",
+          "orderIndex": 0
+        },
+        {
+          "input": "0",
+          "expectedOutput": "1",
+          "sample": true,
+          "explanation": "By definition 0! = 1.",
+          "orderIndex": 1
+        },
+        {
+          "input": "1",
+          "expectedOutput": "1",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 2
+        },
+        {
+          "input": "10",
+          "expectedOutput": "3628800",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 3
+        },
+        {
+          "input": "13",
+          "expectedOutput": "6227020800",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 4
+        },
+        {
+          "input": "20",
+          "expectedOutput": "2432902008176640000",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 5
+        }
+      ],
+      "starters": {
+        "JAVA": "import java.util.*;\n\npublic class Main {\n    // Input: A single integer n.\n    static String solve(String input) {\n        // TODO: parse the input, compute the answer and return it as text.\n        return \"\";\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        StringBuilder sb = new StringBuilder();\n        while (sc.hasNextLine()) sb.append(sc.nextLine()).append('\\n');\n        System.out.print(solve(sb.toString()));\n    }\n}\n",
+        "PYTHON": "import sys\n\ndef solve(text: str) -> str:\n    # Input: A single integer n.\n    # TODO: parse the input, compute the answer and return it as text.\n    return \"\"\n\nprint(solve(sys.stdin.read()))\n",
+        "CPP": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring solve(const string& input) {\n    // Input: A single integer n.\n    // TODO: parse the input, compute the answer and return it as text.\n    return \"\";\n}\n\nint main() {\n    stringstream ss;\n    ss << cin.rdbuf();\n    cout << solve(ss.str());\n    return 0;\n}\n",
+        "JAVASCRIPT": "// Input: A single integer n.\nfunction solve(input) {\n  // TODO: parse the input, compute the answer and return it as text.\n  return '';\n}\n\nconst chunks = [];\nprocess.stdin.on('data', (chunk) => chunks.push(chunk));\nprocess.stdin.on('end', () => process.stdout.write(solve(chunks.join(''))));\n"
+      }
+    },
+    {
+      "slug": "fibonacci",
+      "title": "Fibonacci Number",
+      "difficulty": "EASY",
+      "topic": "Recursion",
+      "tags": "recursion,dp",
+      "description": "The Fibonacci sequence starts F(0) = 0 and F(1) = 1, with every later term equal to the sum of the two previous terms. Print F(n).",
+      "inputFormat": "A single integer n.",
+      "outputFormat": "F(n).",
+      "constraints": "0 <= n <= 50",
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 256,
+      "testCases": [
+        {
+          "input": "10",
+          "expectedOutput": "55",
+          "sample": true,
+          "explanation": "The sequence is 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55; the 10th term is 55.",
+          "orderIndex": 0
+        },
+        {
+          "input": "1",
+          "expectedOutput": "1",
+          "sample": true,
+          "explanation": "The second term is 1.",
+          "orderIndex": 1
+        },
+        {
+          "input": "0",
+          "expectedOutput": "0",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 2
+        },
+        {
+          "input": "20",
+          "expectedOutput": "6765",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 3
+        },
+        {
+          "input": "30",
+          "expectedOutput": "832040",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 4
+        },
+        {
+          "input": "50",
+          "expectedOutput": "12586269025",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 5
+        }
+      ],
+      "starters": {
+        "JAVA": "import java.util.*;\n\npublic class Main {\n    // Input: A single integer n.\n    static String solve(String input) {\n        // TODO: parse the input, compute the answer and return it as text.\n        return \"\";\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        StringBuilder sb = new StringBuilder();\n        while (sc.hasNextLine()) sb.append(sc.nextLine()).append('\\n');\n        System.out.print(solve(sb.toString()));\n    }\n}\n",
+        "PYTHON": "import sys\n\ndef solve(text: str) -> str:\n    # Input: A single integer n.\n    # TODO: parse the input, compute the answer and return it as text.\n    return \"\"\n\nprint(solve(sys.stdin.read()))\n",
+        "CPP": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring solve(const string& input) {\n    // Input: A single integer n.\n    // TODO: parse the input, compute the answer and return it as text.\n    return \"\";\n}\n\nint main() {\n    stringstream ss;\n    ss << cin.rdbuf();\n    cout << solve(ss.str());\n    return 0;\n}\n",
+        "JAVASCRIPT": "// Input: A single integer n.\nfunction solve(input) {\n  // TODO: parse the input, compute the answer and return it as text.\n  return '';\n}\n\nconst chunks = [];\nprocess.stdin.on('data', (chunk) => chunks.push(chunk));\nprocess.stdin.on('end', () => process.stdout.write(solve(chunks.join(''))));\n"
+      }
+    },
+    {
+      "slug": "reverse-linked-list",
+      "title": "Reverse Linked List",
+      "difficulty": "MEDIUM",
+      "topic": "Linked Lists",
+      "tags": "linked-list,pointers",
+      "description": "A linked list is described by its values in order. Reverse the list and print its values from the new head to the new tail.",
+      "inputFormat": "First line: n (number of nodes). Second line: n node values in list order.",
+      "outputFormat": "The node values after reversal, space-separated.",
+      "constraints": "1 <= n <= 10^5\n-10^9 <= node values <= 10^9",
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 256,
+      "testCases": [
+        {
+          "input": "5\n1 2 3 4 5",
+          "expectedOutput": "5 4 3 2 1",
+          "sample": true,
+          "explanation": "The list 1→2→3→4→5 becomes 5→4→3→2→1.",
+          "orderIndex": 0
+        },
+        {
+          "input": "3\n10 20 30",
+          "expectedOutput": "30 20 10",
+          "sample": true,
+          "explanation": "Reversing three nodes gives 30 20 10.",
+          "orderIndex": 1
+        },
+        {
+          "input": "1\n7",
+          "expectedOutput": "7",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 2
+        },
+        {
+          "input": "4\n-1 -2 -3 -4",
+          "expectedOutput": "-4 -3 -2 -1",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 3
+        },
+        {
+          "input": "6\n1 1 2 2 3 3",
+          "expectedOutput": "3 3 2 2 1 1",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 4
+        },
+        {
+          "input": "2\n0 9",
+          "expectedOutput": "9 0",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 5
+        }
+      ],
+      "starters": {
+        "JAVA": "import java.util.*;\n\npublic class Main {\n    // Input: First line: n (number of nodes). Second line: n node values in list order.\n    static String solve(String input) {\n        // TODO: parse the input, compute the answer and return it as text.\n        return \"\";\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        StringBuilder sb = new StringBuilder();\n        while (sc.hasNextLine()) sb.append(sc.nextLine()).append('\\n');\n        System.out.print(solve(sb.toString()));\n    }\n}\n",
+        "PYTHON": "import sys\n\ndef solve(text: str) -> str:\n    # Input: First line: n (number of nodes). Second line: n node values in list order.\n    # TODO: parse the input, compute the answer and return it as text.\n    return \"\"\n\nprint(solve(sys.stdin.read()))\n",
+        "CPP": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring solve(const string& input) {\n    // Input: First line: n (number of nodes). Second line: n node values in list order.\n    // TODO: parse the input, compute the answer and return it as text.\n    return \"\";\n}\n\nint main() {\n    stringstream ss;\n    ss << cin.rdbuf();\n    cout << solve(ss.str());\n    return 0;\n}\n",
+        "JAVASCRIPT": "// Input: First line: n (number of nodes). Second line: n node values in list order.\nfunction solve(input) {\n  // TODO: parse the input, compute the answer and return it as text.\n  return '';\n}\n\nconst chunks = [];\nprocess.stdin.on('data', (chunk) => chunks.push(chunk));\nprocess.stdin.on('end', () => process.stdout.write(solve(chunks.join(''))));\n"
+      }
+    },
+    {
+      "slug": "middle-of-linked-list",
+      "title": "Middle of Linked List",
+      "difficulty": "EASY",
+      "topic": "Linked Lists",
+      "tags": "linked-list,two-pointers",
+      "description": "Find the middle node of a linked list. When the list has an even number of nodes, return the second of the two middle nodes.",
+      "inputFormat": "First line: n. Second line: n node values in list order.",
+      "outputFormat": "The value of the middle node.",
+      "constraints": "1 <= n <= 10^5",
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 256,
+      "testCases": [
+        {
+          "input": "5\n1 2 3 4 5",
+          "expectedOutput": "3",
+          "sample": true,
+          "explanation": "The middle of five nodes is the third node, 3.",
+          "orderIndex": 0
+        },
+        {
+          "input": "4\n1 2 3 4",
+          "expectedOutput": "3",
+          "sample": true,
+          "explanation": "There are two middle nodes, 2 and 3; the second one is returned.",
+          "orderIndex": 1
+        },
+        {
+          "input": "1\n42",
+          "expectedOutput": "42",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 2
+        },
+        {
+          "input": "2\n7 8",
+          "expectedOutput": "8",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 3
+        },
+        {
+          "input": "6\n10 20 30 40 50 60",
+          "expectedOutput": "40",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 4
+        },
+        {
+          "input": "3\n-1 0 1",
+          "expectedOutput": "0",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 5
+        }
+      ],
+      "starters": {
+        "JAVA": "import java.util.*;\n\npublic class Main {\n    // Input: First line: n. Second line: n node values in list order.\n    static String solve(String input) {\n        // TODO: parse the input, compute the answer and return it as text.\n        return \"\";\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        StringBuilder sb = new StringBuilder();\n        while (sc.hasNextLine()) sb.append(sc.nextLine()).append('\\n');\n        System.out.print(solve(sb.toString()));\n    }\n}\n",
+        "PYTHON": "import sys\n\ndef solve(text: str) -> str:\n    # Input: First line: n. Second line: n node values in list order.\n    # TODO: parse the input, compute the answer and return it as text.\n    return \"\"\n\nprint(solve(sys.stdin.read()))\n",
+        "CPP": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring solve(const string& input) {\n    // Input: First line: n. Second line: n node values in list order.\n    // TODO: parse the input, compute the answer and return it as text.\n    return \"\";\n}\n\nint main() {\n    stringstream ss;\n    ss << cin.rdbuf();\n    cout << solve(ss.str());\n    return 0;\n}\n",
+        "JAVASCRIPT": "// Input: First line: n. Second line: n node values in list order.\nfunction solve(input) {\n  // TODO: parse the input, compute the answer and return it as text.\n  return '';\n}\n\nconst chunks = [];\nprocess.stdin.on('data', (chunk) => chunks.push(chunk));\nprocess.stdin.on('end', () => process.stdout.write(solve(chunks.join(''))));\n"
+      }
+    },
+    {
+      "slug": "balanced-brackets",
+      "title": "Balanced Brackets",
+      "difficulty": "MEDIUM",
+      "topic": "Stacks",
+      "tags": "stacks,strings",
+      "description": "Check whether a string made of the characters (), [] and {} is balanced. Every opening bracket must be closed by the matching type in the correct order.",
+      "inputFormat": "One line containing only bracket characters.",
+      "outputFormat": "true if the brackets are balanced, otherwise false.",
+      "constraints": "1 <= length <= 10^5",
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 256,
+      "testCases": [
+        {
+          "input": "()[]{}",
+          "expectedOutput": "true",
+          "sample": true,
+          "explanation": "Each pair is closed immediately and in the correct order.",
+          "orderIndex": 0
+        },
+        {
+          "input": "(]",
+          "expectedOutput": "false",
+          "sample": true,
+          "explanation": "A round bracket cannot be closed by a square bracket.",
+          "orderIndex": 1
+        },
+        {
+          "input": "{[()]}",
+          "expectedOutput": "true",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 2
+        },
+        {
+          "input": "([)]",
+          "expectedOutput": "false",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 3
+        },
+        {
+          "input": "(((",
+          "expectedOutput": "false",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 4
+        },
+        {
+          "input": "{[]}",
+          "expectedOutput": "true",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 5
+        }
+      ],
+      "starters": {
+        "JAVA": "import java.util.*;\n\npublic class Main {\n    // Input: One line containing only bracket characters.\n    static String solve(String input) {\n        // TODO: parse the input, compute the answer and return it as text.\n        return \"\";\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        StringBuilder sb = new StringBuilder();\n        while (sc.hasNextLine()) sb.append(sc.nextLine()).append('\\n');\n        System.out.print(solve(sb.toString()));\n    }\n}\n",
+        "PYTHON": "import sys\n\ndef solve(text: str) -> str:\n    # Input: One line containing only bracket characters.\n    # TODO: parse the input, compute the answer and return it as text.\n    return \"\"\n\nprint(solve(sys.stdin.read()))\n",
+        "CPP": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring solve(const string& input) {\n    // Input: One line containing only bracket characters.\n    // TODO: parse the input, compute the answer and return it as text.\n    return \"\";\n}\n\nint main() {\n    stringstream ss;\n    ss << cin.rdbuf();\n    cout << solve(ss.str());\n    return 0;\n}\n",
+        "JAVASCRIPT": "// Input: One line containing only bracket characters.\nfunction solve(input) {\n  // TODO: parse the input, compute the answer and return it as text.\n  return '';\n}\n\nconst chunks = [];\nprocess.stdin.on('data', (chunk) => chunks.push(chunk));\nprocess.stdin.on('end', () => process.stdout.write(solve(chunks.join(''))));\n"
+      }
+    },
+    {
+      "slug": "next-greater-element",
+      "title": "Next Greater Element",
+      "difficulty": "MEDIUM",
+      "topic": "Stacks",
+      "tags": "stacks,monotonic-stack",
+      "description": "For every element, find the first value to its right that is strictly greater. If there is none, print -1 for that position.",
+      "inputFormat": "First line: n. Second line: n integers.",
+      "outputFormat": "n integers: the next greater element for each position.",
+      "constraints": "1 <= n <= 10^5\n-10^9 <= each element <= 10^9",
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 256,
+      "testCases": [
+        {
+          "input": "4\n4 5 2 25",
+          "expectedOutput": "5 25 25 -1",
+          "sample": true,
+          "explanation": "For 4 the next greater is 5; for 5 it is 25; 2 is followed by 25; 25 has nothing greater to its right.",
+          "orderIndex": 0
+        },
+        {
+          "input": "5\n1 2 3 4 5",
+          "expectedOutput": "2 3 4 5 -1",
+          "sample": true,
+          "explanation": "The array is strictly increasing, so each element is followed by the next one.",
+          "orderIndex": 1
+        },
+        {
+          "input": "5\n5 4 3 2 1",
+          "expectedOutput": "-1 -1 -1 -1 -1",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 2
+        },
+        {
+          "input": "1\n7",
+          "expectedOutput": "-1",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 3
+        },
+        {
+          "input": "6\n2 7 3 5 4 6",
+          "expectedOutput": "7 -1 5 6 6 -1",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 4
+        },
+        {
+          "input": "4\n1 1 1 1",
+          "expectedOutput": "-1 -1 -1 -1",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 5
+        }
+      ],
+      "starters": {
+        "JAVA": "import java.util.*;\n\npublic class Main {\n    // Input: First line: n. Second line: n integers.\n    static String solve(String input) {\n        // TODO: parse the input, compute the answer and return it as text.\n        return \"\";\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        StringBuilder sb = new StringBuilder();\n        while (sc.hasNextLine()) sb.append(sc.nextLine()).append('\\n');\n        System.out.print(solve(sb.toString()));\n    }\n}\n",
+        "PYTHON": "import sys\n\ndef solve(text: str) -> str:\n    # Input: First line: n. Second line: n integers.\n    # TODO: parse the input, compute the answer and return it as text.\n    return \"\"\n\nprint(solve(sys.stdin.read()))\n",
+        "CPP": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring solve(const string& input) {\n    // Input: First line: n. Second line: n integers.\n    // TODO: parse the input, compute the answer and return it as text.\n    return \"\";\n}\n\nint main() {\n    stringstream ss;\n    ss << cin.rdbuf();\n    cout << solve(ss.str());\n    return 0;\n}\n",
+        "JAVASCRIPT": "// Input: First line: n. Second line: n integers.\nfunction solve(input) {\n  // TODO: parse the input, compute the answer and return it as text.\n  return '';\n}\n\nconst chunks = [];\nprocess.stdin.on('data', (chunk) => chunks.push(chunk));\nprocess.stdin.on('end', () => process.stdout.write(solve(chunks.join(''))));\n"
+      }
+    },
+    {
+      "slug": "recent-counter",
+      "title": "Recent Requests",
+      "difficulty": "MEDIUM",
+      "topic": "Queues",
+      "tags": "queues,sliding-window",
+      "description": "Requests arrive at increasing timestamps. For each timestamp t, report how many requests occurred in the inclusive interval [t - 3000, t].",
+      "inputFormat": "First line: n. Second line: n non-decreasing integer timestamps.",
+      "outputFormat": "n counts, one for each timestamp, space-separated.",
+      "constraints": "1 <= n <= 10^5\n0 <= timestamp <= 10^9",
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 256,
+      "testCases": [
+        {
+          "input": "4\n1 100 3001 3002",
+          "expectedOutput": "1 2 3 3",
+          "sample": true,
+          "explanation": "At 3001, requests at 1, 100 and 3001 are within 3000 ms; at 3002 the same three are still in range.",
+          "orderIndex": 0
+        },
+        {
+          "input": "3\n0 3000 6000",
+          "expectedOutput": "1 2 2",
+          "sample": true,
+          "explanation": "At 3000 the window covers 0..3000 (two requests); at 6000 only 6000 itself remains.",
+          "orderIndex": 1
+        },
+        {
+          "input": "1\n5000",
+          "expectedOutput": "1",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 2
+        },
+        {
+          "input": "5\n10 20 30 40 50",
+          "expectedOutput": "1 2 3 4 5",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 3
+        },
+        {
+          "input": "4\n1000 2000 4000 5000",
+          "expectedOutput": "1 2 3 3",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 4
+        },
+        {
+          "input": "6\n0 3000 3001 6001 6002 9002",
+          "expectedOutput": "1 2 2 2 2 2",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 5
+        }
+      ],
+      "starters": {
+        "JAVA": "import java.util.*;\n\npublic class Main {\n    // Input: First line: n. Second line: n non-decreasing integer timestamps.\n    static String solve(String input) {\n        // TODO: parse the input, compute the answer and return it as text.\n        return \"\";\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        StringBuilder sb = new StringBuilder();\n        while (sc.hasNextLine()) sb.append(sc.nextLine()).append('\\n');\n        System.out.print(solve(sb.toString()));\n    }\n}\n",
+        "PYTHON": "import sys\n\ndef solve(text: str) -> str:\n    # Input: First line: n. Second line: n non-decreasing integer timestamps.\n    # TODO: parse the input, compute the answer and return it as text.\n    return \"\"\n\nprint(solve(sys.stdin.read()))\n",
+        "CPP": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring solve(const string& input) {\n    // Input: First line: n. Second line: n non-decreasing integer timestamps.\n    // TODO: parse the input, compute the answer and return it as text.\n    return \"\";\n}\n\nint main() {\n    stringstream ss;\n    ss << cin.rdbuf();\n    cout << solve(ss.str());\n    return 0;\n}\n",
+        "JAVASCRIPT": "// Input: First line: n. Second line: n non-decreasing integer timestamps.\nfunction solve(input) {\n  // TODO: parse the input, compute the answer and return it as text.\n  return '';\n}\n\nconst chunks = [];\nprocess.stdin.on('data', (chunk) => chunks.push(chunk));\nprocess.stdin.on('end', () => process.stdout.write(solve(chunks.join(''))));\n"
+      }
+    },
+    {
+      "slug": "first-negative-window",
+      "title": "First Negative In Each Window",
+      "difficulty": "MEDIUM",
+      "topic": "Queues",
+      "tags": "queues,sliding-window",
+      "description": "For every contiguous window of size k, print the first negative number in that window. If a window has no negative number, print 0.",
+      "inputFormat": "First line: n and k. Second line: n integers.",
+      "outputFormat": "One integer per window, space-separated.",
+      "constraints": "1 <= k <= n <= 10^5\n-10^4 <= each element <= 10^4",
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 256,
+      "testCases": [
+        {
+          "input": "5 2\n-8 2 3 -6 10",
+          "expectedOutput": "-8 0 -6 -6",
+          "sample": true,
+          "explanation": "Windows are [-8,2], [2,3], [3,-6] and [-6,10]; their first negatives (or 0) are -8, 0, -6, -6.",
+          "orderIndex": 0
+        },
+        {
+          "input": "4 4\n1 2 3 4",
+          "expectedOutput": "0",
+          "sample": true,
+          "explanation": "The only window has no negative numbers.",
+          "orderIndex": 1
+        },
+        {
+          "input": "3 1\n-1 2 -3",
+          "expectedOutput": "-1 0 -3",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 2
+        },
+        {
+          "input": "6 3\n1 -2 -3 4 -5 6",
+          "expectedOutput": "-2 -2 -3 -5",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 3
+        },
+        {
+          "input": "5 5\n5 4 3 2 1",
+          "expectedOutput": "0",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 4
+        },
+        {
+          "input": "4 2\n-1 -2 -3 -4",
+          "expectedOutput": "-1 -2 -3",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 5
+        }
+      ],
+      "starters": {
+        "JAVA": "import java.util.*;\n\npublic class Main {\n    // Input: First line: n and k. Second line: n integers.\n    static String solve(String input) {\n        // TODO: parse the input, compute the answer and return it as text.\n        return \"\";\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        StringBuilder sb = new StringBuilder();\n        while (sc.hasNextLine()) sb.append(sc.nextLine()).append('\\n');\n        System.out.print(solve(sb.toString()));\n    }\n}\n",
+        "PYTHON": "import sys\n\ndef solve(text: str) -> str:\n    # Input: First line: n and k. Second line: n integers.\n    # TODO: parse the input, compute the answer and return it as text.\n    return \"\"\n\nprint(solve(sys.stdin.read()))\n",
+        "CPP": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring solve(const string& input) {\n    // Input: First line: n and k. Second line: n integers.\n    // TODO: parse the input, compute the answer and return it as text.\n    return \"\";\n}\n\nint main() {\n    stringstream ss;\n    ss << cin.rdbuf();\n    cout << solve(ss.str());\n    return 0;\n}\n",
+        "JAVASCRIPT": "// Input: First line: n and k. Second line: n integers.\nfunction solve(input) {\n  // TODO: parse the input, compute the answer and return it as text.\n  return '';\n}\n\nconst chunks = [];\nprocess.stdin.on('data', (chunk) => chunks.push(chunk));\nprocess.stdin.on('end', () => process.stdout.write(solve(chunks.join(''))));\n"
+      }
+    },
+    {
+      "slug": "tree-height",
+      "title": "Binary Tree Height",
+      "difficulty": "MEDIUM",
+      "topic": "Binary Trees",
+      "tags": "binary-tree,recursion",
+      "description": "A binary tree is given in level order, where -1 marks a missing node. Compute its height as the number of levels from the root down to the deepest node. An empty tree has height 0.",
+      "inputFormat": "One line of level-order values; -1 means no node at that position.",
+      "outputFormat": "The number of levels in the tree.",
+      "constraints": "1 <= number of values <= 10^5",
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 256,
+      "testCases": [
+        {
+          "input": "1 2 3 -1 -1 4 5",
+          "expectedOutput": "3",
+          "sample": true,
+          "explanation": "Level 1: 1; level 2: 2, 3; level 3: 4, 5. Height is 3.",
+          "orderIndex": 0
+        },
+        {
+          "input": "1 -1 2",
+          "expectedOutput": "2",
+          "sample": true,
+          "explanation": "Root 1 has only a right child 2, so there are two levels.",
+          "orderIndex": 1
+        },
+        {
+          "input": "-1",
+          "expectedOutput": "0",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 2
+        },
+        {
+          "input": "5",
+          "expectedOutput": "1",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 3
+        },
+        {
+          "input": "3 9 20 -1 -1 15 7",
+          "expectedOutput": "3",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 4
+        },
+        {
+          "input": "1 2 -1 3 -1 -1 -1",
+          "expectedOutput": "3",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 5
+        }
+      ],
+      "starters": {
+        "JAVA": "import java.util.*;\n\npublic class Main {\n    // Input: One line of level-order values; -1 means no node at that position.\n    static String solve(String input) {\n        // TODO: parse the input, compute the answer and return it as text.\n        return \"\";\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        StringBuilder sb = new StringBuilder();\n        while (sc.hasNextLine()) sb.append(sc.nextLine()).append('\\n');\n        System.out.print(solve(sb.toString()));\n    }\n}\n",
+        "PYTHON": "import sys\n\ndef solve(text: str) -> str:\n    # Input: One line of level-order values; -1 means no node at that position.\n    # TODO: parse the input, compute the answer and return it as text.\n    return \"\"\n\nprint(solve(sys.stdin.read()))\n",
+        "CPP": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring solve(const string& input) {\n    // Input: One line of level-order values; -1 means no node at that position.\n    // TODO: parse the input, compute the answer and return it as text.\n    return \"\";\n}\n\nint main() {\n    stringstream ss;\n    ss << cin.rdbuf();\n    cout << solve(ss.str());\n    return 0;\n}\n",
+        "JAVASCRIPT": "// Input: One line of level-order values; -1 means no node at that position.\nfunction solve(input) {\n  // TODO: parse the input, compute the answer and return it as text.\n  return '';\n}\n\nconst chunks = [];\nprocess.stdin.on('data', (chunk) => chunks.push(chunk));\nprocess.stdin.on('end', () => process.stdout.write(solve(chunks.join(''))));\n"
+      }
+    },
+    {
+      "slug": "count-leaves",
+      "title": "Count Tree Leaves",
+      "difficulty": "EASY",
+      "topic": "Binary Trees",
+      "tags": "binary-tree,recursion",
+      "description": "A binary tree is given in level order with -1 marking missing nodes. Count the leaves: nodes that have no left child and no right child.",
+      "inputFormat": "One line of level-order values; -1 means no node.",
+      "outputFormat": "The number of leaf nodes.",
+      "constraints": "1 <= number of values <= 10^5",
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 256,
+      "testCases": [
+        {
+          "input": "1 2 3 -1 -1 4 5",
+          "expectedOutput": "3",
+          "sample": true,
+          "explanation": "Nodes 4 and 5 have no children, so there are 2 leaves.",
+          "orderIndex": 0
+        },
+        {
+          "input": "1 -1 2",
+          "expectedOutput": "1",
+          "sample": true,
+          "explanation": "Node 2 is the only node without children.",
+          "orderIndex": 1
+        },
+        {
+          "input": "-1",
+          "expectedOutput": "0",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 2
+        },
+        {
+          "input": "5",
+          "expectedOutput": "1",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 3
+        },
+        {
+          "input": "3 9 20 -1 -1 15 7",
+          "expectedOutput": "3",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 4
+        },
+        {
+          "input": "1 2 3 4 -1 -1 5",
+          "expectedOutput": "2",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 5
+        }
+      ],
+      "starters": {
+        "JAVA": "import java.util.*;\n\npublic class Main {\n    // Input: One line of level-order values; -1 means no node.\n    static String solve(String input) {\n        // TODO: parse the input, compute the answer and return it as text.\n        return \"\";\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        StringBuilder sb = new StringBuilder();\n        while (sc.hasNextLine()) sb.append(sc.nextLine()).append('\\n');\n        System.out.print(solve(sb.toString()));\n    }\n}\n",
+        "PYTHON": "import sys\n\ndef solve(text: str) -> str:\n    # Input: One line of level-order values; -1 means no node.\n    # TODO: parse the input, compute the answer and return it as text.\n    return \"\"\n\nprint(solve(sys.stdin.read()))\n",
+        "CPP": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring solve(const string& input) {\n    // Input: One line of level-order values; -1 means no node.\n    // TODO: parse the input, compute the answer and return it as text.\n    return \"\";\n}\n\nint main() {\n    stringstream ss;\n    ss << cin.rdbuf();\n    cout << solve(ss.str());\n    return 0;\n}\n",
+        "JAVASCRIPT": "// Input: One line of level-order values; -1 means no node.\nfunction solve(input) {\n  // TODO: parse the input, compute the answer and return it as text.\n  return '';\n}\n\nconst chunks = [];\nprocess.stdin.on('data', (chunk) => chunks.push(chunk));\nprocess.stdin.on('end', () => process.stdout.write(solve(chunks.join(''))));\n"
+      }
+    },
+    {
+      "slug": "bst-inorder",
+      "title": "BST In-Order Traversal",
+      "difficulty": "EASY",
+      "topic": "Binary Search Trees",
+      "tags": "bst,traversal",
+      "description": "Insert the given distinct values into an initially empty binary search tree in order. Print the in-order traversal, which visits the values in ascending order.",
+      "inputFormat": "First line: n. Second line: n distinct integers.",
+      "outputFormat": "The in-order traversal, space-separated.",
+      "constraints": "1 <= n <= 10^5\n-10^9 <= values <= 10^9",
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 256,
+      "testCases": [
+        {
+          "input": "5\n5 3 8 1 4",
+          "expectedOutput": "1 3 4 5 8",
+          "sample": true,
+          "explanation": "In-order traversal of the resulting BST visits 1, 3, 4, 5, 8.",
+          "orderIndex": 0
+        },
+        {
+          "input": "3\n2 1 3",
+          "expectedOutput": "1 2 3",
+          "sample": true,
+          "explanation": "Root 2 has children 1 and 3, so in-order gives 1 2 3.",
+          "orderIndex": 1
+        },
+        {
+          "input": "1\n10",
+          "expectedOutput": "10",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 2
+        },
+        {
+          "input": "7\n10 5 15 3 7 12 20",
+          "expectedOutput": "3 5 7 10 12 15 20",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 3
+        },
+        {
+          "input": "5\n1 2 3 4 5",
+          "expectedOutput": "1 2 3 4 5",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 4
+        },
+        {
+          "input": "6\n8 3 10 1 6 14",
+          "expectedOutput": "1 3 6 8 10 14",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 5
+        }
+      ],
+      "starters": {
+        "JAVA": "import java.util.*;\n\npublic class Main {\n    // Input: First line: n. Second line: n distinct integers.\n    static String solve(String input) {\n        // TODO: parse the input, compute the answer and return it as text.\n        return \"\";\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        StringBuilder sb = new StringBuilder();\n        while (sc.hasNextLine()) sb.append(sc.nextLine()).append('\\n');\n        System.out.print(solve(sb.toString()));\n    }\n}\n",
+        "PYTHON": "import sys\n\ndef solve(text: str) -> str:\n    # Input: First line: n. Second line: n distinct integers.\n    # TODO: parse the input, compute the answer and return it as text.\n    return \"\"\n\nprint(solve(sys.stdin.read()))\n",
+        "CPP": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring solve(const string& input) {\n    // Input: First line: n. Second line: n distinct integers.\n    // TODO: parse the input, compute the answer and return it as text.\n    return \"\";\n}\n\nint main() {\n    stringstream ss;\n    ss << cin.rdbuf();\n    cout << solve(ss.str());\n    return 0;\n}\n",
+        "JAVASCRIPT": "// Input: First line: n. Second line: n distinct integers.\nfunction solve(input) {\n  // TODO: parse the input, compute the answer and return it as text.\n  return '';\n}\n\nconst chunks = [];\nprocess.stdin.on('data', (chunk) => chunks.push(chunk));\nprocess.stdin.on('end', () => process.stdout.write(solve(chunks.join(''))));\n"
+      }
+    },
+    {
+      "slug": "kth-smallest-bst",
+      "title": "Kth Smallest In BST",
+      "difficulty": "MEDIUM",
+      "topic": "Binary Search Trees",
+      "tags": "bst,traversal",
+      "description": "A valid binary search tree is given in level order with -1 marking missing nodes. Print its k-th smallest value (k is 1-based).",
+      "inputFormat": "First line: n and k. Second line: n level-order values; -1 means no node.",
+      "outputFormat": "The k-th smallest value.",
+      "constraints": "1 <= k <= n <= 10^5",
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 256,
+      "testCases": [
+        {
+          "input": "5 3\n3 1 4 -1 2",
+          "expectedOutput": "3",
+          "sample": true,
+          "explanation": "The values in ascending order are 1, 2, 3, 4; the third is 3.",
+          "orderIndex": 0
+        },
+        {
+          "input": "3 1\n2 1 3",
+          "expectedOutput": "1",
+          "sample": true,
+          "explanation": "The smallest value is 1.",
+          "orderIndex": 1
+        },
+        {
+          "input": "1 1\n5",
+          "expectedOutput": "5",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 2
+        },
+        {
+          "input": "7 7\n4 2 6 1 3 5 7",
+          "expectedOutput": "7",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 3
+        },
+        {
+          "input": "7 4\n4 2 6 1 3 5 7",
+          "expectedOutput": "4",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 4
+        },
+        {
+          "input": "5 2\n10 5 15 -1 8",
+          "expectedOutput": "8",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 5
+        }
+      ],
+      "starters": {
+        "JAVA": "import java.util.*;\n\npublic class Main {\n    // Input: First line: n and k. Second line: n level-order values; -1 means no node.\n    static String solve(String input) {\n        // TODO: parse the input, compute the answer and return it as text.\n        return \"\";\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        StringBuilder sb = new StringBuilder();\n        while (sc.hasNextLine()) sb.append(sc.nextLine()).append('\\n');\n        System.out.print(solve(sb.toString()));\n    }\n}\n",
+        "PYTHON": "import sys\n\ndef solve(text: str) -> str:\n    # Input: First line: n and k. Second line: n level-order values; -1 means no node.\n    # TODO: parse the input, compute the answer and return it as text.\n    return \"\"\n\nprint(solve(sys.stdin.read()))\n",
+        "CPP": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring solve(const string& input) {\n    // Input: First line: n and k. Second line: n level-order values; -1 means no node.\n    // TODO: parse the input, compute the answer and return it as text.\n    return \"\";\n}\n\nint main() {\n    stringstream ss;\n    ss << cin.rdbuf();\n    cout << solve(ss.str());\n    return 0;\n}\n",
+        "JAVASCRIPT": "// Input: First line: n and k. Second line: n level-order values; -1 means no node.\nfunction solve(input) {\n  // TODO: parse the input, compute the answer and return it as text.\n  return '';\n}\n\nconst chunks = [];\nprocess.stdin.on('data', (chunk) => chunks.push(chunk));\nprocess.stdin.on('end', () => process.stdout.write(solve(chunks.join(''))));\n"
+      }
+    },
+    {
+      "slug": "connected-components",
+      "title": "Connected Components",
+      "difficulty": "MEDIUM",
+      "topic": "Graphs",
+      "tags": "graphs,dfs,union-find",
+      "description": "An undirected graph has n vertices numbered 1 to n and m edges. Count how many connected components it contains.",
+      "inputFormat": "First line: n and m. Next m lines: two vertices u v describing an edge.",
+      "outputFormat": "The number of connected components.",
+      "constraints": "1 <= n <= 10^5\n0 <= m <= 2*10^5",
+      "timeLimitMs": 3000,
+      "memoryLimitMb": 256,
+      "testCases": [
+        {
+          "input": "5 3\n1 2\n2 3\n4 5",
+          "expectedOutput": "2",
+          "sample": true,
+          "explanation": "Vertices 1, 2 and 3 form one component; 4 and 5 form another. Vertex 3 is not connected to 4 or 5.",
+          "orderIndex": 0
+        },
+        {
+          "input": "4 0",
+          "expectedOutput": "4",
+          "sample": true,
+          "explanation": "With no edges every vertex is its own component.",
+          "orderIndex": 1
+        },
+        {
+          "input": "6 5\n1 2\n2 3\n3 1\n4 5\n5 6",
+          "expectedOutput": "2",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 2
+        },
+        {
+          "input": "1 0",
+          "expectedOutput": "1",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 3
+        },
+        {
+          "input": "5 4\n1 2\n1 3\n1 4\n1 5",
+          "expectedOutput": "1",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 4
+        },
+        {
+          "input": "8 4\n1 2\n3 4\n5 6\n7 8",
+          "expectedOutput": "4",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 5
+        }
+      ],
+      "starters": {
+        "JAVA": "import java.util.*;\n\npublic class Main {\n    // Input: First line: n and m. Next m lines: two vertices u v describing an edge.\n    static String solve(String input) {\n        // TODO: parse the input, compute the answer and return it as text.\n        return \"\";\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        StringBuilder sb = new StringBuilder();\n        while (sc.hasNextLine()) sb.append(sc.nextLine()).append('\\n');\n        System.out.print(solve(sb.toString()));\n    }\n}\n",
+        "PYTHON": "import sys\n\ndef solve(text: str) -> str:\n    # Input: First line: n and m. Next m lines: two vertices u v describing an edge.\n    # TODO: parse the input, compute the answer and return it as text.\n    return \"\"\n\nprint(solve(sys.stdin.read()))\n",
+        "CPP": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring solve(const string& input) {\n    // Input: First line: n and m. Next m lines: two vertices u v describing an edge.\n    // TODO: parse the input, compute the answer and return it as text.\n    return \"\";\n}\n\nint main() {\n    stringstream ss;\n    ss << cin.rdbuf();\n    cout << solve(ss.str());\n    return 0;\n}\n",
+        "JAVASCRIPT": "// Input: First line: n and m. Next m lines: two vertices u v describing an edge.\nfunction solve(input) {\n  // TODO: parse the input, compute the answer and return it as text.\n  return '';\n}\n\nconst chunks = [];\nprocess.stdin.on('data', (chunk) => chunks.push(chunk));\nprocess.stdin.on('end', () => process.stdout.write(solve(chunks.join(''))));\n"
+      }
+    },
+    {
+      "slug": "shortest-path-bfs",
+      "title": "Shortest Path (Unweighted)",
+      "difficulty": "MEDIUM",
+      "topic": "Graphs",
+      "tags": "graphs,bfs",
+      "description": "Find the number of edges on the shortest path between two vertices of an unweighted undirected graph. If no path exists, print -1.",
+      "inputFormat": "First line: n, m, s and t. Next m lines: edges u v.",
+      "outputFormat": "The shortest distance from s to t in edges, or -1.",
+      "constraints": "1 <= n <= 10^5\n0 <= m <= 2*10^5\n1 <= s, t <= n",
+      "timeLimitMs": 3000,
+      "memoryLimitMb": 256,
+      "testCases": [
+        {
+          "input": "5 5 1 5\n1 2\n2 3\n3 4\n4 5\n1 5",
+          "expectedOutput": "1",
+          "sample": true,
+          "explanation": "The direct edge 1-5 gives distance 1.",
+          "orderIndex": 0
+        },
+        {
+          "input": "4 2 1 4\n1 2\n3 4",
+          "expectedOutput": "-1",
+          "sample": true,
+          "explanation": "There is no path from 1 to 4.",
+          "orderIndex": 1
+        },
+        {
+          "input": "3 2 1 3\n1 2\n2 3",
+          "expectedOutput": "2",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 2
+        },
+        {
+          "input": "6 6 1 6\n1 2\n2 3\n3 4\n4 5\n5 6\n1 6",
+          "expectedOutput": "1",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 3
+        },
+        {
+          "input": "2 0 1 2",
+          "expectedOutput": "-1",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 4
+        },
+        {
+          "input": "5 4 2 4\n1 2\n2 3\n3 4\n4 5",
+          "expectedOutput": "2",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 5
+        }
+      ],
+      "starters": {
+        "JAVA": "import java.util.*;\n\npublic class Main {\n    // Input: First line: n, m, s and t. Next m lines: edges u v.\n    static String solve(String input) {\n        // TODO: parse the input, compute the answer and return it as text.\n        return \"\";\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        StringBuilder sb = new StringBuilder();\n        while (sc.hasNextLine()) sb.append(sc.nextLine()).append('\\n');\n        System.out.print(solve(sb.toString()));\n    }\n}\n",
+        "PYTHON": "import sys\n\ndef solve(text: str) -> str:\n    # Input: First line: n, m, s and t. Next m lines: edges u v.\n    # TODO: parse the input, compute the answer and return it as text.\n    return \"\"\n\nprint(solve(sys.stdin.read()))\n",
+        "CPP": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring solve(const string& input) {\n    // Input: First line: n, m, s and t. Next m lines: edges u v.\n    // TODO: parse the input, compute the answer and return it as text.\n    return \"\";\n}\n\nint main() {\n    stringstream ss;\n    ss << cin.rdbuf();\n    cout << solve(ss.str());\n    return 0;\n}\n",
+        "JAVASCRIPT": "// Input: First line: n, m, s and t. Next m lines: edges u v.\nfunction solve(input) {\n  // TODO: parse the input, compute the answer and return it as text.\n  return '';\n}\n\nconst chunks = [];\nprocess.stdin.on('data', (chunk) => chunks.push(chunk));\nprocess.stdin.on('end', () => process.stdout.write(solve(chunks.join(''))));\n"
+      }
+    },
+    {
+      "slug": "climbing-stairs",
+      "title": "Climbing Stairs",
+      "difficulty": "EASY",
+      "topic": "Dynamic Programming",
+      "tags": "dp,recursion",
+      "description": "You climb a staircase with n steps, taking either one or two steps at a time. Count how many distinct ways there are to reach the top.",
+      "inputFormat": "A single integer n.",
+      "outputFormat": "The number of distinct ways to climb n steps.",
+      "constraints": "1 <= n <= 45",
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 256,
+      "testCases": [
+        {
+          "input": "2",
+          "expectedOutput": "2",
+          "sample": true,
+          "explanation": "You can take 1+1 or 2, giving 2 ways.",
+          "orderIndex": 0
+        },
+        {
+          "input": "3",
+          "expectedOutput": "3",
+          "sample": true,
+          "explanation": "Ways: 1+1+1, 1+2 and 2+1.",
+          "orderIndex": 1
+        },
+        {
+          "input": "1",
+          "expectedOutput": "1",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 2
+        },
+        {
+          "input": "5",
+          "expectedOutput": "8",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 3
+        },
+        {
+          "input": "10",
+          "expectedOutput": "89",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 4
+        },
+        {
+          "input": "45",
+          "expectedOutput": "1836311903",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 5
+        }
+      ],
+      "starters": {
+        "JAVA": "import java.util.*;\n\npublic class Main {\n    // Input: A single integer n.\n    static String solve(String input) {\n        // TODO: parse the input, compute the answer and return it as text.\n        return \"\";\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        StringBuilder sb = new StringBuilder();\n        while (sc.hasNextLine()) sb.append(sc.nextLine()).append('\\n');\n        System.out.print(solve(sb.toString()));\n    }\n}\n",
+        "PYTHON": "import sys\n\ndef solve(text: str) -> str:\n    # Input: A single integer n.\n    # TODO: parse the input, compute the answer and return it as text.\n    return \"\"\n\nprint(solve(sys.stdin.read()))\n",
+        "CPP": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring solve(const string& input) {\n    // Input: A single integer n.\n    // TODO: parse the input, compute the answer and return it as text.\n    return \"\";\n}\n\nint main() {\n    stringstream ss;\n    ss << cin.rdbuf();\n    cout << solve(ss.str());\n    return 0;\n}\n",
+        "JAVASCRIPT": "// Input: A single integer n.\nfunction solve(input) {\n  // TODO: parse the input, compute the answer and return it as text.\n  return '';\n}\n\nconst chunks = [];\nprocess.stdin.on('data', (chunk) => chunks.push(chunk));\nprocess.stdin.on('end', () => process.stdout.write(solve(chunks.join(''))));\n"
+      }
+    },
+    {
+      "slug": "longest-increasing-subsequence",
+      "title": "Longest Increasing Subsequence",
+      "difficulty": "MEDIUM",
+      "topic": "Dynamic Programming",
+      "tags": "dp,arrays",
+      "description": "Find the length of the longest strictly increasing subsequence. The chosen elements keep their original order but do not have to be contiguous.",
+      "inputFormat": "First line: n. Second line: n integers.",
+      "outputFormat": "The length of the longest strictly increasing subsequence.",
+      "constraints": "1 <= n <= 10^5\n-10^9 <= each element <= 10^9",
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 256,
+      "testCases": [
+        {
+          "input": "8\n10 9 2 5 3 7 101 18",
+          "expectedOutput": "4",
+          "sample": true,
+          "explanation": "One longest subsequence is 2, 3, 7, 18, which has length 4.",
+          "orderIndex": 0
+        },
+        {
+          "input": "5\n1 2 3 4 5",
+          "expectedOutput": "5",
+          "sample": true,
+          "explanation": "The whole array is increasing, so the answer is 5.",
+          "orderIndex": 1
+        },
+        {
+          "input": "5\n5 4 3 2 1",
+          "expectedOutput": "1",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 2
+        },
+        {
+          "input": "1\n7",
+          "expectedOutput": "1",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 3
+        },
+        {
+          "input": "6\n2 2 2 2 2 2",
+          "expectedOutput": "1",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 4
+        },
+        {
+          "input": "8\n1 3 6 7 9 4 10 5",
+          "expectedOutput": "6",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 5
+        }
+      ],
+      "starters": {
+        "JAVA": "import java.util.*;\n\npublic class Main {\n    // Input: First line: n. Second line: n integers.\n    static String solve(String input) {\n        // TODO: parse the input, compute the answer and return it as text.\n        return \"\";\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        StringBuilder sb = new StringBuilder();\n        while (sc.hasNextLine()) sb.append(sc.nextLine()).append('\\n');\n        System.out.print(solve(sb.toString()));\n    }\n}\n",
+        "PYTHON": "import sys\n\ndef solve(text: str) -> str:\n    # Input: First line: n. Second line: n integers.\n    # TODO: parse the input, compute the answer and return it as text.\n    return \"\"\n\nprint(solve(sys.stdin.read()))\n",
+        "CPP": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring solve(const string& input) {\n    // Input: First line: n. Second line: n integers.\n    // TODO: parse the input, compute the answer and return it as text.\n    return \"\";\n}\n\nint main() {\n    stringstream ss;\n    ss << cin.rdbuf();\n    cout << solve(ss.str());\n    return 0;\n}\n",
+        "JAVASCRIPT": "// Input: First line: n. Second line: n integers.\nfunction solve(input) {\n  // TODO: parse the input, compute the answer and return it as text.\n  return '';\n}\n\nconst chunks = [];\nprocess.stdin.on('data', (chunk) => chunks.push(chunk));\nprocess.stdin.on('end', () => process.stdout.write(solve(chunks.join(''))));\n"
+      }
+    },
+    {
+      "slug": "coin-change-min",
+      "title": "Minimum Coins",
+      "difficulty": "MEDIUM",
+      "topic": "Dynamic Programming",
+      "tags": "dp,coins",
+      "description": "Given coin denominations and an amount, find the fewest coins needed to make exactly that amount. You may use each denomination any number of times. Print -1 if the amount cannot be formed.",
+      "inputFormat": "First line: n and amount. Second line: n distinct coin denominations.",
+      "outputFormat": "The minimum number of coins, or -1.",
+      "constraints": "1 <= n <= 100\n0 <= amount <= 10^4\n1 <= coin <= 10^4",
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 256,
+      "testCases": [
+        {
+          "input": "3 11\n1 2 5",
+          "expectedOutput": "3",
+          "sample": true,
+          "explanation": "11 = 5 + 5 + 1 needs three coins, which is optimal.",
+          "orderIndex": 0
+        },
+        {
+          "input": "2 3\n2 4",
+          "expectedOutput": "-1",
+          "sample": true,
+          "explanation": "No combination of 2s and 4s makes 3.",
+          "orderIndex": 1
+        },
+        {
+          "input": "1 0\n7",
+          "expectedOutput": "0",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 2
+        },
+        {
+          "input": "3 7\n2 3 5",
+          "expectedOutput": "2",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 3
+        },
+        {
+          "input": "4 10\n1 3 4 5",
+          "expectedOutput": "2",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 4
+        },
+        {
+          "input": "3 27\n2 5 10",
+          "expectedOutput": "4",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 5
+        }
+      ],
+      "starters": {
+        "JAVA": "import java.util.*;\n\npublic class Main {\n    // Input: First line: n and amount. Second line: n distinct coin denominations.\n    static String solve(String input) {\n        // TODO: parse the input, compute the answer and return it as text.\n        return \"\";\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        StringBuilder sb = new StringBuilder();\n        while (sc.hasNextLine()) sb.append(sc.nextLine()).append('\\n');\n        System.out.print(solve(sb.toString()));\n    }\n}\n",
+        "PYTHON": "import sys\n\ndef solve(text: str) -> str:\n    # Input: First line: n and amount. Second line: n distinct coin denominations.\n    # TODO: parse the input, compute the answer and return it as text.\n    return \"\"\n\nprint(solve(sys.stdin.read()))\n",
+        "CPP": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring solve(const string& input) {\n    // Input: First line: n and amount. Second line: n distinct coin denominations.\n    // TODO: parse the input, compute the answer and return it as text.\n    return \"\";\n}\n\nint main() {\n    stringstream ss;\n    ss << cin.rdbuf();\n    cout << solve(ss.str());\n    return 0;\n}\n",
+        "JAVASCRIPT": "// Input: First line: n and amount. Second line: n distinct coin denominations.\nfunction solve(input) {\n  // TODO: parse the input, compute the answer and return it as text.\n  return '';\n}\n\nconst chunks = [];\nprocess.stdin.on('data', (chunk) => chunks.push(chunk));\nprocess.stdin.on('end', () => process.stdout.write(solve(chunks.join(''))));\n"
+      }
+    },
+    {
+      "slug": "activity-selection",
+      "title": "Activity Selection",
+      "difficulty": "MEDIUM",
+      "topic": "Greedy Algorithms",
+      "tags": "greedy,intervals",
+      "description": "Each activity occupies the half-open interval [start, end). Choose the maximum number of activities that do not overlap. Two activities may touch at an endpoint.",
+      "inputFormat": "First line: n. Next n lines: start end for each activity.",
+      "outputFormat": "The maximum number of non-overlapping activities.",
+      "constraints": "1 <= n <= 10^5\n0 <= start < end <= 10^9",
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 256,
+      "testCases": [
+        {
+          "input": "6\n1 3\n2 5\n4 7\n1 8\n5 9\n8 10",
+          "expectedOutput": "3",
+          "sample": true,
+          "explanation": "Choosing 1-3, 4-7 and 8-10 gives three non-overlapping activities.",
+          "orderIndex": 0
+        },
+        {
+          "input": "1\n2 4",
+          "expectedOutput": "1",
+          "sample": true,
+          "explanation": "With a single activity the answer is 1.",
+          "orderIndex": 1
+        },
+        {
+          "input": "4\n1 2\n3 4\n5 6\n7 8",
+          "expectedOutput": "4",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 2
+        },
+        {
+          "input": "3\n1 5\n2 6\n3 7",
+          "expectedOutput": "1",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 3
+        },
+        {
+          "input": "5\n5 9\n1 2\n3 4\n0 6\n8 9",
+          "expectedOutput": "3",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 4
+        },
+        {
+          "input": "2\n1 4\n4 7",
+          "expectedOutput": "2",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 5
+        }
+      ],
+      "starters": {
+        "JAVA": "import java.util.*;\n\npublic class Main {\n    // Input: First line: n. Next n lines: start end for each activity.\n    static String solve(String input) {\n        // TODO: parse the input, compute the answer and return it as text.\n        return \"\";\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        StringBuilder sb = new StringBuilder();\n        while (sc.hasNextLine()) sb.append(sc.nextLine()).append('\\n');\n        System.out.print(solve(sb.toString()));\n    }\n}\n",
+        "PYTHON": "import sys\n\ndef solve(text: str) -> str:\n    # Input: First line: n. Next n lines: start end for each activity.\n    # TODO: parse the input, compute the answer and return it as text.\n    return \"\"\n\nprint(solve(sys.stdin.read()))\n",
+        "CPP": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring solve(const string& input) {\n    // Input: First line: n. Next n lines: start end for each activity.\n    // TODO: parse the input, compute the answer and return it as text.\n    return \"\";\n}\n\nint main() {\n    stringstream ss;\n    ss << cin.rdbuf();\n    cout << solve(ss.str());\n    return 0;\n}\n",
+        "JAVASCRIPT": "// Input: First line: n. Next n lines: start end for each activity.\nfunction solve(input) {\n  // TODO: parse the input, compute the answer and return it as text.\n  return '';\n}\n\nconst chunks = [];\nprocess.stdin.on('data', (chunk) => chunks.push(chunk));\nprocess.stdin.on('end', () => process.stdout.write(solve(chunks.join(''))));\n"
+      }
+    },
+    {
+      "slug": "assign-cookies",
+      "title": "Assign Cookies",
+      "difficulty": "EASY",
+      "topic": "Greedy Algorithms",
+      "tags": "greedy,two-pointers",
+      "description": "Each child has a minimum cookie size they will accept, and each cookie has a size. A child is satisfied by a cookie whose size is at least their requirement, and each cookie feeds at most one child. Maximise the number of satisfied children.",
+      "inputFormat": "First line: n and m. Second line: n greed factors. Third line: m cookie sizes (the line may be absent when m = 0).",
+      "outputFormat": "The maximum number of satisfied children.",
+      "constraints": "1 <= n <= 10^5\n0 <= m <= 10^5\n1 <= sizes, greed <= 10^9",
+      "timeLimitMs": 2000,
+      "memoryLimitMb": 256,
+      "testCases": [
+        {
+          "input": "3 2\n1 2 3\n1 1",
+          "expectedOutput": "1",
+          "sample": true,
+          "explanation": "Both cookies are size 1, so only the child requiring 1 can be satisfied.",
+          "orderIndex": 0
+        },
+        {
+          "input": "2 3\n1 2\n1 2 3",
+          "expectedOutput": "2",
+          "sample": true,
+          "explanation": "Cookies 1 and 2 satisfy both children.",
+          "orderIndex": 1
+        },
+        {
+          "input": "1 1\n5\n4",
+          "expectedOutput": "0",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 2
+        },
+        {
+          "input": "4 4\n1 2 3 4\n1 2 3 4",
+          "expectedOutput": "4",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 3
+        },
+        {
+          "input": "3 3\n10 9 8\n8 9 10",
+          "expectedOutput": "3",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 4
+        },
+        {
+          "input": "2 3\n3 4\n1 2 4",
+          "expectedOutput": "1",
+          "sample": false,
+          "explanation": null,
+          "orderIndex": 5
+        }
+      ],
+      "starters": {
+        "JAVA": "import java.util.*;\n\npublic class Main {\n    // Input: First line: n and m. Second line: n greed factors. Third line: m cookie sizes (the line may be absent when m = 0).\n    static String solve(String input) {\n        // TODO: parse the input, compute the answer and return it as text.\n        return \"\";\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        StringBuilder sb = new StringBuilder();\n        while (sc.hasNextLine()) sb.append(sc.nextLine()).append('\\n');\n        System.out.print(solve(sb.toString()));\n    }\n}\n",
+        "PYTHON": "import sys\n\ndef solve(text: str) -> str:\n    # Input: First line: n and m. Second line: n greed factors. Third line: m cookie sizes (the line may be absent when m = 0).\n    # TODO: parse the input, compute the answer and return it as text.\n    return \"\"\n\nprint(solve(sys.stdin.read()))\n",
+        "CPP": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring solve(const string& input) {\n    // Input: First line: n and m. Second line: n greed factors. Third line: m cookie sizes (the line may be absent when m = 0).\n    // TODO: parse the input, compute the answer and return it as text.\n    return \"\";\n}\n\nint main() {\n    stringstream ss;\n    ss << cin.rdbuf();\n    cout << solve(ss.str());\n    return 0;\n}\n",
+        "JAVASCRIPT": "// Input: First line: n and m. Second line: n greed factors. Third line: m cookie sizes (the line may be absent when m = 0).\nfunction solve(input) {\n  // TODO: parse the input, compute the answer and return it as text.\n  return '';\n}\n\nconst chunks = [];\nprocess.stdin.on('data', (chunk) => chunks.push(chunk));\nprocess.stdin.on('end', () => process.stdout.write(solve(chunks.join(''))));\n"
+      }
+    }
+  ]
+}
